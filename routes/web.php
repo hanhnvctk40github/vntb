@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Middleware\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,13 @@ Route::get('/', function () {
 Route::get('/detail', function () {
     return view('index');
 });
+
+Route::get('/admin/login', [AdminController::class, 'login_index']);
+Route::post('/admin/login-admin', [AdminController::class, 'login'])->name('admin.login');
+Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
+
+Route::prefix('/admin')->middleware([Auth::class])->group(function () {
+    Route::get('/article', [AdminController::class, 'index'])->name('admin.article');
+});
+
+Route::get('/article', [AdminController::class, 'index'])->name('admin.article');
