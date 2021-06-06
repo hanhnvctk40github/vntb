@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Middleware\Auth;
 
 /*
@@ -28,7 +29,14 @@ Route::post('/admin/login-admin', [AdminController::class, 'login'])->name('admi
 Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
 Route::prefix('/admin')->middleware([Auth::class])->group(function () {
-    Route::get('/article', [AdminController::class, 'index'])->name('admin.article');
+       // Article
+       Route::get('/article', [ArticleController::class, 'index'])->name('admin.article.index');
+       Route::get('/article/add', [ArticleController::class, 'addGet'])->name('admin.article.add.get');
+       Route::post('/article/add', [ArticleController::class, 'addPost'])->name('admin.article.add.post');
+       
+       Route::get('/article/edit/{id}', [ArticleController::class, 'editGet'])->name('admin.article.edit.get');
+       Route::post('/article/edit', [ArticleController::class, 'editPost'])->name('admin.article.edit.post');
+       Route::get('/article/delete/{id}', [ArticleController::class, 'delete'])->name('admin.article.delete');
+   
+       Route::post('/article/upload', [ArticleController::class, 'upload'])->name('admin.article.upload');
 });
-
-Route::get('/article', [AdminController::class, 'index'])->name('admin.article');

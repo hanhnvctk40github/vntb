@@ -29,10 +29,6 @@ class AdminController extends Controller
         return view('Login.login');
     }
 
-    public function index(){
-        return view('Admin.pages.article.index');
-    }
-
     public function logout(){
         $user = null;
         $user = Session::get('user');
