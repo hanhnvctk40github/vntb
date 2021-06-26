@@ -4,16 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Article;
-use Illuminate\Support\Facades\Storage;
+use App\Services\InfoService;
 
 class ArticleController extends Controller
 {
-    public function detail($id) {
-        $article = Article::findOrFail($id);
-        return view('detail',['article'=>$article]);
+    protected $infoService;
+    public function __construct(InfoService $infoService)
+    {
+        $this->infoService =  $infoService;
     }
 
-    
+    public function detail($id) {
+        $ip             = $_SERVER['REMOTE_ADDR']; 
+        $user_agent     = $_SERVER['HTTP_USER_AGENT'];
+        $resultSaveInfo = $this->infoService->saveInfo($ip, $user_agent);
+        $article = Article::findOrFail($id);
+        $title = $article->title;
+        return view('detail',['article'=>$article,'title'=>$title]);
+    }
 
     public function index(){
         $article = new Article;

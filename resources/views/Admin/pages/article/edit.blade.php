@@ -68,7 +68,8 @@
                                         stroke-linejoin="round" stroke-width="32"
                                         d="M320 255.79l-64-64-64 64M256 448.21V207.79"></path>
                                 </svg>Chọn
-                                ảnh ...</button>
+                                ảnh từ máy tính...</button>
+                                
                             <input type="file" accept=".png, .jpg, .jpeg" id="avatarInput" class="hidden"
                                 name="background_image" required="required" />
                             <div

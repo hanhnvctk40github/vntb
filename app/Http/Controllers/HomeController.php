@@ -17,8 +17,8 @@ class HomeController extends Controller
         $ip             = $_SERVER['REMOTE_ADDR']; 
         $user_agent     = $_SERVER['HTTP_USER_AGENT'];
         $resultSaveInfo = $this->infoService->saveInfo($ip, $user_agent);
-
-        $articles = Article::all();
-        return view('index',['articles'=>$articles]);
+        $article = Article::all()->first();
+        $articles = Article::all()->take(3);
+        return view('index',['articles'=>$articles,'article'=>$article]);
     }
 }
