@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\HomeController;
 use App\Http\Middleware\Auth;
 
 /*
@@ -16,13 +17,9 @@ use App\Http\Middleware\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [HomeController::class, 'index'])->name('index');
 
-Route::get('/detail', function () {
-    return view('index');
-});
+Route::get('/detail/{id}', [ArticleController::class, 'detail'])->name('detail');
 
 Route::get('/admin/login', [AdminController::class, 'login_index']);
 Route::post('/admin/login-admin', [AdminController::class, 'login'])->name('admin.login');

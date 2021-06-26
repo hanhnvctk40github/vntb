@@ -305,21 +305,21 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
 			padding: 0 !important;
 		}
 	</style>
-	<link rel="stylesheet" id="wp-block-library-css" href="./assets/style.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="tds-style-frontend-css" href="./assets/style-front.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="wordpress-popular-posts-css-css" href="./assets/wpp.css" type="text/css" media="all">
-	<link rel="stylesheet" id="novomag-style-css" href="./assets/main-stylesheet.css" type="text/css" media="all">
-	<link rel="stylesheet" id="child-style-css" href="./assets/style.css" type="text/css" media="all">
-	<link rel="stylesheet" id="google-fonts-1-css" href="./assets/css" type="text/css" media="all">
-	<link rel="stylesheet" id="google-fonts-2-css" href="./assets/css(1)" type="text/css" media="all">
-	<link rel="stylesheet" id="google-fonts-3-css" href="./assets/css(2)" type="text/css" media="all">
-	<link rel="stylesheet" id="reset-css" href="./assets/reset.css" type="text/css" media="all">
-	<link rel="stylesheet" id="font-awesome-css" href="./assets/font-awesome.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="main-stylesheet-css" href="./assets/main-stylesheet(1).css" type="text/css" media="all">
-	<link rel="stylesheet" id="lightbox-css" href="./assets/lightbox.css" type="text/css" media="all">
-	<link rel="stylesheet" id="shortcodes-css" href="./assets/shortcodes.css" type="text/css" media="all">
-	<link rel="stylesheet" id="owl-carousel-css" href="./assets/owl.carousel.css" type="text/css" media="all">
-	<link rel="stylesheet" id="responsive-css" href="./assets/responsive.css" type="text/css" media="all">
+	<link rel="stylesheet" id="wp-block-library-css" href="{{asset('assets/style.min.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" id="tds-style-frontend-css" href="{{asset('assets/style-front.min.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" id="wordpress-popular-posts-css-css" href="{{asset('assets/wpp.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" id="novomag-style-css" href="{{asset('assets/main-stylesheet.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" id="child-style-css" href="{{asset('assets/style.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" id="google-fonts-1-css" href="{{asset('assets/css')}}" type="text/css" media="all">
+	<link rel="stylesheet" id="google-fonts-2-css" href="{{asset('assets/css(1)')}}" type="text/css" media="all">
+	<link rel="stylesheet" id="google-fonts-3-css" href="{{asset('assets/css(2)')}}" type="text/css" media="all">
+	<link rel="stylesheet" id="reset-css" href="{{asset('assets/reset.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" id="font-awesome-css" href="{{asset('assets/font-awesome.min.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" id="main-stylesheet-css" href="{{asset('assets/main-stylesheet(1).css')}}" type="text/css" media="all">
+	<link rel="stylesheet" id="lightbox-css" href="{{asset('assets/lightbox.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" id="shortcodes-css" href="{{asset('assets/shortcodes.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" id="owl-carousel-css" href="{{asset('assets/owl.carousel.css')}}" type="text/css" media="all">
+	<link rel="stylesheet" id="responsive-css" href="{{asset('assets/responsive.css')}}" type="text/css" media="all">
 	<!--[if lt IE 8]>
 <link rel='stylesheet' id='ie-only-styles-css'  href='https://vietnamthoibao.org/wp-content/themes/novomag-theme/css/ie-ancient.css?ver=5.7' type='text/css' media='all' />
 <![endif]-->
@@ -1632,7 +1632,7 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
 				<aside id="sidebar" class="right" style="height: auto; min-height: 3763.11px;">
 					<div class="widget_text widget-1 first widget">
 						<div class="w-title">
-							<h3>Vượt tường lửa</h3>
+							<h3>Đăng ký thành viên</h3>
 						</div>
 						<div class="textwidget custom-html-widget"><a href="https://proxysite.xyz/"><img data-lazyloaded="1" src="./assets/logo-proxysite.png" class="aligncenter size-full wp-image-27850 litespeed-loaded" data-src="https://vietnamthoibao.org/wp-content/uploads/2020/05/logo-proxysite.png" alt="" width="238" height="49" data-was-processed="true" style="opacity: 1;"><noscript><img class="aligncenter size-full wp-image-27850" src="https://vietnamthoibao.org/wp-content/uploads/2020/05/logo-proxysite.png" alt="" width="238" height="49" /></noscript></a></div>
 					</div>

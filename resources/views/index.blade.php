@@ -87,102 +87,27 @@
 			<a href="https://vietnamthoibao.org/category/news/" class="upper-title">đọc thêm</a>
 		</div>
 		<div class="article-grid-list">
+			@if($articles)
+				@foreach($articles as $article)
+					<div class="item">
 
-			<div class="item">
-
-				<div class="item-header">
-					<a href="https://vietnamthoibao.org/vntb-bat-ba-nguyen-thuy-hanh-nha-nuoc-muon-xoa-bo-quyen-tu-do-ngon-luan/" class="overset-image load-effect">
-						<img data-lazyloaded="1" src="./assets/Nguyễn-Thuý-Hạnh-2-248x165_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Nguyễn-Thuý-Hạnh-2-248x165_c.jpg" alt="VNTB – Bắt bà Nguyễn Thúy Hạnh: Nhà nước muốn xóa bỏ quyền tự do ngôn luận" data-was-processed="true" style="opacity: 1;"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Nguyễn-Thuý-Hạnh-2-248x165_c.jpg" alt="VNTB &#8211; Bắt bà Nguyễn Thúy Hạnh: Nhà nước muốn xóa bỏ quyền tự do ngôn luận" /></noscript> </a>
-				</div>
-				<div class="item-content">
-					<div class="post-category" style="color: #214a82;">
-						<a href="https://vietnamthoibao.org/">VNTB</a>
+						<div class="item-header">
+							<a href="{{route('detail',['id'=>$article->id])}}" class="overset-image load-effect">
+								<img src="{{$article->background_image}}" class="item-photo litespeed-loaded" >
+							</a>
+						</div>
+						<div class="item-content">
+							<div class="post-category" style="color: #214a82;">
+								<a href="/">VNTB</a>
+							</div>
+							<h4><a href="{{route('detail',['id'=>$article->id])}}">
+							{{$article->title}}</a></h4>
+							<p>Ngọc Vân &nbsp; (VNTB) –&nbsp;{{$article->description}}</p>
+							<a href="{{route('detail',['id'=>$article->id])}}" class="novo-read-more">đọc thêm<i class="fa fa-angle-double-right"></i></a>
+						</div>
 					</div>
-					<h4><a href="https://vietnamthoibao.org/vntb-bat-ba-nguyen-thuy-hanh-nha-nuoc-muon-xoa-bo-quyen-tu-do-ngon-luan/">VNTB – Bắt bà Nguyễn Thúy Hạnh: Nhà nước muốn xóa bỏ quyền tự do ngôn luận</a></h4>
-					<p>Ngọc Vân &nbsp; (VNTB) –&nbsp;Có lẽ Chế độ bắt đầu run sợ trước viễn cảnh phải đối diện với hàng</p>
-					<a href="https://vietnamthoibao.org/vntb-bat-ba-nguyen-thuy-hanh-nha-nuoc-muon-xoa-bo-quyen-tu-do-ngon-luan/" class="novo-read-more">đọc thêm<i class="fa fa-angle-double-right"></i></a>
-				</div>
-			</div>
-
-			<div class="item">
-
-				<div class="item-header">
-					<a href="https://vietnamthoibao.org/vntb-quoc-hoi-lap-phap-goc-nhin-tu-mot-hoi-luan-cua-bbc/" class="overset-image load-effect">
-						<img data-lazyloaded="1" src="./assets/CTQH-Nguyễn-Thị-im-Ngân-Vương-Dình-Huệ-248x165_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/CTQH-Nguyễn-Thị-im-Ngân-Vương-Dình-Huệ-248x165_c.jpg" alt="VNTB – Quốc hội lập pháp: góc nhìn từ một hội luận của BBC" data-was-processed="true" style="opacity: 1;"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/CTQH-Nguyễn-Thị-im-Ngân-Vương-Dình-Huệ-248x165_c.jpg" alt="VNTB &#8211; Quốc hội lập pháp: góc nhìn từ một hội luận của BBC" /></noscript> </a>
-				</div>
-				<div class="item-content">
-					<div class="post-category" style="color: #214a82;">
-						<a href="https://vietnamthoibao.org/">Tin mới</a>
-					</div>
-					<h4><a href="https://vietnamthoibao.org/vntb-quoc-hoi-lap-phap-goc-nhin-tu-mot-hoi-luan-cua-bbc/">VNTB – Quốc hội lập pháp: góc nhìn từ một hội luận của BBC</a></h4>
-					<p>Lynn Huỳnh (VNTB) – Vì sao Quốc hội khóa cũ lại bầu nhân sự Chính phủ khóa mới? &nbsp; Một&nbsp;hội</p>
-					<a href="https://vietnamthoibao.org/vntb-quoc-hoi-lap-phap-goc-nhin-tu-mot-hoi-luan-cua-bbc/" class="novo-read-more">đọc thêm<i class="fa fa-angle-double-right"></i></a>
-				</div>
-			</div>
-
-			<div class="item">
-
-				<div class="item-header">
-					<a href="https://vietnamthoibao.org/vntb-ghi-chep-chuyen-no-xo-chuyen-kia/" class="overset-image load-effect">
-						<img data-lazyloaded="1" src="./assets/Tỷ-lệ-ngân-sách-dược-giữ-lại-248x165_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Tỷ-lệ-ngân-sách-dược-giữ-lại-248x165_c.jpg" alt="VNTB – Ghi chép chuyện nọ xọ chuyện kia" data-was-processed="true" style="opacity: 1;"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Tỷ-lệ-ngân-sách-dược-giữ-lại-248x165_c.jpg" alt="VNTB &#8211; Ghi chép chuyện nọ xọ chuyện kia" /></noscript> </a>
-				</div>
-				<div class="item-content">
-					<div class="post-category" style="color: #214a82;">
-						<a href="https://vietnamthoibao.org/">Diễn Đàn</a>
-					</div>
-					<h4><a href="https://vietnamthoibao.org/vntb-ghi-chep-chuyen-no-xo-chuyen-kia/">VNTB – Ghi chép chuyện nọ xọ chuyện kia</a></h4>
-					<p>Nguyễn Nam &nbsp; (VNTB) – Miền Nam quá thiệt thòi &nbsp; Người Việt Nam rất giỏi và rất thông minh,</p>
-					<a href="https://vietnamthoibao.org/vntb-ghi-chep-chuyen-no-xo-chuyen-kia/" class="novo-read-more">đọc thêm<i class="fa fa-angle-double-right"></i></a>
-				</div>
-			</div>
-
-			<div class="item">
-
-				<div class="item-header">
-					<a href="https://vietnamthoibao.org/vntb-cai-ket-nao-cho-cau-chuyen-anh-dan-phong-quan-va-ong-hieu-truong-truong-nguyen-van-to/" class="overset-image load-effect">
-						<img data-lazyloaded="1" src="./assets/Hai-thiếu-niên-bị-dánh-tại-Trường-Nguyễn-Văn-Tố-Ảnh-cắt-từ-clip-248x165_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Hai-thiếu-niên-bị-dánh-tại-Trường-Nguyễn-Văn-Tố-Ảnh-cắt-từ-clip-248x165_c.jpg" alt="VNTB – Cái kết nào cho câu chuyện anh dân phòng quận và ông hiệu trưởng trường Nguyễn Văn Tố?" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Hai-thiếu-niên-bị-dánh-tại-Trường-Nguyễn-Văn-Tố-Ảnh-cắt-từ-clip-248x165_c.jpg" alt="VNTB &#8211; Cái kết nào cho câu chuyện anh dân phòng quận và ông hiệu trưởng trường Nguyễn Văn Tố?" /></noscript> </a>
-				</div>
-				<div class="item-content">
-					<div class="post-category" style="color: #214a82;">
-						<a href="https://vietnamthoibao.org/">Tin mới</a>
-					</div>
-					<h4><a href="https://vietnamthoibao.org/vntb-cai-ket-nao-cho-cau-chuyen-anh-dan-phong-quan-va-ong-hieu-truong-truong-nguyen-van-to/">VNTB – Cái kết nào cho câu chuyện anh dân phòng quận và ông hiệu trưởng trường Nguyễn Văn Tố?</a></h4>
-					<p>Út Sài Gòn (VNTB) – Mấy anh dân phòng ‘bắt trộm’ là hai đứa trẻ, đẩy bọn chúng vào căn</p>
-					<a href="https://vietnamthoibao.org/vntb-cai-ket-nao-cho-cau-chuyen-anh-dan-phong-quan-va-ong-hieu-truong-truong-nguyen-van-to/" class="novo-read-more">đọc thêm<i class="fa fa-angle-double-right"></i></a>
-				</div>
-			</div>
-
-			<div class="item">
-
-				<div class="item-header">
-					<a href="https://vietnamthoibao.org/vntb-trieu-tap-la-gi-trong-chuyen-to-tung/" class="overset-image load-effect">
-						<img data-lazyloaded="1" src="./assets/Giấy-triệu-tập-248x165_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Giấy-triệu-tập-248x165_c.jpg" alt="VNTB – “Triệu tập” là gì trong chuyện tố tụng?" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Giấy-triệu-tập-248x165_c.jpg" alt="VNTB &#8211; “Triệu tập” là gì trong chuyện tố tụng?" /></noscript> </a>
-				</div>
-				<div class="item-content">
-					<div class="post-category" style="color: #214a82;">
-						<a href="https://vietnamthoibao.org/">VNTB</a>
-					</div>
-					<h4><a href="https://vietnamthoibao.org/vntb-trieu-tap-la-gi-trong-chuyen-to-tung/">VNTB – “Triệu tập” là gì trong chuyện tố tụng?</a></h4>
-					<p>Hà Nguyên &nbsp; (VNTB) – “Giấy triệu tập” được sử dụng khi đã có quyết định khởi tố vụ án</p>
-					<a href="https://vietnamthoibao.org/vntb-trieu-tap-la-gi-trong-chuyen-to-tung/" class="novo-read-more">đọc thêm<i class="fa fa-angle-double-right"></i></a>
-				</div>
-			</div>
-
-			<div class="item">
-
-				<div class="item-header">
-					<a href="https://vietnamthoibao.org/vntb-biem-hoa-duc-vua-van-tue-2/" class="overset-image load-effect">
-						<img data-lazyloaded="1" src="./assets/Facebook-ở-Úc--248x165_c.png" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Facebook-ở-Úc--248x165_c.png" alt="VNTB – Biếm Hoạ: Đức vua vạn tuế" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Facebook-ở-Úc--248x165_c.png" alt="VNTB &#8211; Biếm Hoạ: Đức vua vạn tuế" /></noscript> </a>
-				</div>
-				<div class="item-content">
-					<div class="post-category" style="color: #214a82;">
-						<a href="https://vietnamthoibao.org/">VNTB</a>
-					</div>
-					<h4><a href="https://vietnamthoibao.org/vntb-biem-hoa-duc-vua-van-tue-2/">VNTB – Biếm Hoạ: Đức vua vạn tuế</a></h4>
-					<p>Trần Thế Kỷ&nbsp; &nbsp; Tin bài liên quan: VNTB – Biếm họa : Đức vua vạn tuế VNTB – Biếm</p>
-					<a href="https://vietnamthoibao.org/vntb-biem-hoa-duc-vua-van-tue-2/" class="novo-read-more">đọc thêm<i class="fa fa-angle-double-right"></i></a>
-				</div>
-			</div>
+				@endforeach
+			@endif
 		</div>
 		<!-- END .panel -->
 	</div> <!-- BEGIN .panel-split -->
@@ -197,42 +122,35 @@
 				<div class="article-list">
 					<div class="item main-artice">
 						<div class="item-header">
-							<a href="https://vietnamthoibao.org/vntb-cai-ket-nao-cho-cau-chuyen-anh-dan-phong-quan-va-ong-hieu-truong-truong-nguyen-van-to/">
-								<img data-lazyloaded="1" src="./assets/Hai-thiếu-niên-bị-dánh-tại-Trường-Nguyễn-Văn-Tố-Ảnh-cắt-từ-clip-541x311_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Hai-thiếu-niên-bị-dánh-tại-Trường-Nguyễn-Văn-Tố-Ảnh-cắt-từ-clip-541x311_c.jpg" alt="VNTB – Cái kết nào cho câu chuyện anh dân phòng quận và ông hiệu trưởng trường Nguyễn Văn Tố?" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Hai-thiếu-niên-bị-dánh-tại-Trường-Nguyễn-Văn-Tố-Ảnh-cắt-từ-clip-541x311_c.jpg" alt="VNTB &#8211; Cái kết nào cho câu chuyện anh dân phòng quận và ông hiệu trưởng trường Nguyễn Văn Tố?" /></noscript> </a>
+							<a href="https://vietnamthoibao.org/vntb-bat-ba-nguyen-thuy-hanh-nha-nuoc-muon-xoa-bo-quyen-tu-do-ngon-luan/">
+								<img data-lazyloaded="1" src="./assets/Nguyễn-Thuý-Hạnh-2-541x311_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Nguyễn-Thuý-Hạnh-2-541x311_c.jpg" alt="VNTB – Bắt bà Nguyễn Thúy Hạnh: Nhà nước muốn xóa bỏ quyền tự do ngôn luận" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Nguyễn-Thuý-Hạnh-2-541x311_c.jpg" alt="VNTB &#8211; Bắt bà Nguyễn Thúy Hạnh: Nhà nước muốn xóa bỏ quyền tự do ngôn luận" /></noscript> </a>
 							<div class="article-slide">
-								<h3><a href="https://vietnamthoibao.org/vntb-cai-ket-nao-cho-cau-chuyen-anh-dan-phong-quan-va-ong-hieu-truong-truong-nguyen-van-to/">VNTB – Cái kết nào cho câu chuyện anh dân phòng quận và ông hiệu trưởng trường Nguyễn Văn Tố?</a></h3>
-								<a href="https://vietnamthoibao.org/vntb-cai-ket-nao-cho-cau-chuyen-anh-dan-phong-quan-va-ong-hieu-truong-truong-nguyen-van-to/" class="info-line">
-									<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;11.04.2021 12:49</span>
+								<h3><a href="https://vietnamthoibao.org/vntb-bat-ba-nguyen-thuy-hanh-nha-nuoc-muon-xoa-bo-quyen-tu-do-ngon-luan/">VNTB – Bắt bà Nguyễn Thúy Hạnh: Nhà nước muốn xóa bỏ quyền tự do ngôn luận</a></h3>
+								<a href="https://vietnamthoibao.org/vntb-bat-ba-nguyen-thuy-hanh-nha-nuoc-muon-xoa-bo-quyen-tu-do-ngon-luan/" class="info-line">
+									<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;11.04.2021 2:52</span>
 									<span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span>
 								</a>
 							</div>
 						</div>
 						<div class="item-content">
-							<p>Út Sài Gòn (VNTB) – Mấy anh dân phòng ‘bắt trộm’ là hai đứa trẻ, đẩy bọn chúng vào căn</p>
+							<p>Ngọc Vân &nbsp; (VNTB) –&nbsp;Có lẽ Chế độ bắt đầu run sợ trước viễn cảnh phải đối diện với hàng</p>
 						</div>
 					</div>
-					<div class="item">
-						<a href="https://vietnamthoibao.org/vntb-tan-bo-truong-bo-gddt-nguyen-kim-son-mong-muon-doi-song-thu-nhap-cua-nguoi-thay-duoc-cai-thien/">
-							<img data-lazyloaded="1" src="./assets/Năm-2010-nhà-giáo-có-thể-sống-dược-bằng-dồng-lương--60x60_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Năm-2010-nhà-giáo-có-thể-sống-dược-bằng-dồng-lương--60x60_c.jpg" alt="VNTB – Tân Bộ trưởng Bộ GD&amp;ĐT Nguyễn Kim Sơn mong muốn đời sống, thu nhập của người thầy được cải thiện" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Năm-2010-nhà-giáo-có-thể-sống-dược-bằng-dồng-lương--60x60_c.jpg" alt="VNTB &#8211; Tân Bộ trưởng Bộ GD&#038;ĐT Nguyễn Kim Sơn mong muốn đời sống, thu nhập của người thầy được cải thiện" /></noscript> </a>
-						<div class="item-content">
-							<h3><a href="https://vietnamthoibao.org/vntb-tan-bo-truong-bo-gddt-nguyen-kim-son-mong-muon-doi-song-thu-nhap-cua-nguoi-thay-duoc-cai-thien/">VNTB – Tân Bộ trưởng Bộ GD&amp;ĐT Nguyễn Kim Sơn mong muốn đời sống, thu nhập của người thầy được cải thiện</a></h3>
-							<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;10.04.2021 3:03</span>
-							<a href="https://vietnamthoibao.org/vntb-tan-bo-truong-bo-gddt-nguyen-kim-son-mong-muon-doi-song-thu-nhap-cua-nguoi-thay-duoc-cai-thien/#comments"><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span></a>
+					@if($articles)
+						@foreach($articles as $article)
+						<div class="item">
+							<a href="{{route('detail',['id'=>$article->id])}}">
+								<img src="{{$article->background}}" class="item-photo litespeed-loaded" >
+							</a>
+							<div class="item-content">
+								<h3><a href="{{route('detail',['id'=>$article->id])}}">{{$article->title}}</a></h3>
+								<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;10.04.2021 3:03</span>
+								<a href="{{route('detail',['id'=>$article->id])}}"><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span></a>
 
+							</div>
 						</div>
-					</div>
-
-					<div class="item">
-						<a href="https://vietnamthoibao.org/vntb-thien-ha-luan-oi-ong-bo-truong/">
-							<img data-lazyloaded="1" src="./assets/kẹt-xe-dường-về-miền-Tây-60x60_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/kẹt-xe-dường-về-miền-Tây-60x60_c.jpg" alt="VNTB – Thiên hạ luận: ới ông bộ trưởng" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/kẹt-xe-dường-về-miền-Tây-60x60_c.jpg" alt="VNTB &#8211; Thiên hạ luận: ới ông bộ trưởng" /></noscript> </a>
-						<div class="item-content">
-							<h3><a href="https://vietnamthoibao.org/vntb-thien-ha-luan-oi-ong-bo-truong/">VNTB – Thiên hạ luận: ới ông bộ trưởng</a></h3>
-							<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;10.04.2021 12:22</span>
-							<a href="https://vietnamthoibao.org/vntb-thien-ha-luan-oi-ong-bo-truong/#comments"><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span></a>
-
-						</div>
-					</div>
-
+						@endforeach
+					@endif
 				</div>
 				<!-- END .panel -->
 			</div>
@@ -264,27 +182,21 @@
 							<p>Ngọc Vân &nbsp; (VNTB) –&nbsp;Có lẽ Chế độ bắt đầu run sợ trước viễn cảnh phải đối diện với hàng</p>
 						</div>
 					</div>
-					<div class="item">
-						<a href="https://vietnamthoibao.org/vntb-trieu-tap-la-gi-trong-chuyen-to-tung/">
-							<img data-lazyloaded="1" src="./assets/Giấy-triệu-tập-60x60_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Giấy-triệu-tập-60x60_c.jpg" alt="VNTB – “Triệu tập” là gì trong chuyện tố tụng?" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Giấy-triệu-tập-60x60_c.jpg" alt="VNTB &#8211; “Triệu tập” là gì trong chuyện tố tụng?" /></noscript> </a>
-						<div class="item-content">
-							<h3><a href="https://vietnamthoibao.org/vntb-trieu-tap-la-gi-trong-chuyen-to-tung/">VNTB – “Triệu tập” là gì trong chuyện tố tụng?</a></h3>
-							<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;11.04.2021 12:43</span>
-							<a href="https://vietnamthoibao.org/vntb-trieu-tap-la-gi-trong-chuyen-to-tung/#comments"><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span></a>
+					@if($articles)
+						@foreach($articles as $article)
+						<div class="item">
+							<a href="{{route('detail',['id'=>$article->id])}}">
+								<img src="{{$article->background}}" class="item-photo litespeed-loaded" >
+							</a>
+							<div class="item-content">
+								<h3><a href="{{route('detail',['id'=>$article->id])}}">{{$article->title}}</a></h3>
+								<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;10.04.2021 3:03</span>
+								<a href="{{route('detail',['id'=>$article->id])}}"><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span></a>
 
+							</div>
 						</div>
-					</div>
-
-					<div class="item">
-						<a href="https://vietnamthoibao.org/vntb-khi-quy-dan-su-da-bi-nha-chuc-trach-co-tinh-chinh-tri-hoa/">
-							<img data-lazyloaded="1" src="./assets/bà-Nguyễn-Thuý-Hạnh-60x60_c.jpeg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/bà-Nguyễn-Thuý-Hạnh-60x60_c.jpeg" alt="VNTB – Khi ‘quỹ dân sự’ đã bị nhà chức trách cố tình ‘chính trị hóa’" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/bà-Nguyễn-Thuý-Hạnh-60x60_c.jpeg" alt="VNTB &#8211; Khi ‘quỹ dân sự’ đã bị nhà chức trách cố tình ‘chính trị hóa’" /></noscript> </a>
-						<div class="item-content">
-							<h3><a href="https://vietnamthoibao.org/vntb-khi-quy-dan-su-da-bi-nha-chuc-trach-co-tinh-chinh-tri-hoa/">VNTB – Khi ‘quỹ dân sự’ đã bị nhà chức trách cố tình ‘chính trị hóa’</a></h3>
-							<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;10.04.2021 6:37</span>
-							<a href="https://vietnamthoibao.org/vntb-khi-quy-dan-su-da-bi-nha-chuc-trach-co-tinh-chinh-tri-hoa/#comments"><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span></a>
-
-						</div>
-					</div>
+						@endforeach
+					@endif
 
 				</div>
 				<!-- END .panel -->
@@ -305,42 +217,35 @@
 				<div class="article-list">
 					<div class="item main-artice">
 						<div class="item-header">
-							<a href="https://vietnamthoibao.org/vntb-ghi-chep-chuyen-no-xo-chuyen-kia/">
-								<img data-lazyloaded="1" src="./assets/Tỷ-lệ-ngân-sách-dược-giữ-lại-541x311_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Tỷ-lệ-ngân-sách-dược-giữ-lại-541x311_c.jpg" alt="VNTB – Ghi chép chuyện nọ xọ chuyện kia" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Tỷ-lệ-ngân-sách-dược-giữ-lại-541x311_c.jpg" alt="VNTB &#8211; Ghi chép chuyện nọ xọ chuyện kia" /></noscript> </a>
+							<a href="https://vietnamthoibao.org/vntb-bat-ba-nguyen-thuy-hanh-nha-nuoc-muon-xoa-bo-quyen-tu-do-ngon-luan/">
+								<img data-lazyloaded="1" src="./assets/Nguyễn-Thuý-Hạnh-2-541x311_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Nguyễn-Thuý-Hạnh-2-541x311_c.jpg" alt="VNTB – Bắt bà Nguyễn Thúy Hạnh: Nhà nước muốn xóa bỏ quyền tự do ngôn luận" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Nguyễn-Thuý-Hạnh-2-541x311_c.jpg" alt="VNTB &#8211; Bắt bà Nguyễn Thúy Hạnh: Nhà nước muốn xóa bỏ quyền tự do ngôn luận" /></noscript> </a>
 							<div class="article-slide">
-								<h3><a href="https://vietnamthoibao.org/vntb-ghi-chep-chuyen-no-xo-chuyen-kia/">VNTB – Ghi chép chuyện nọ xọ chuyện kia</a></h3>
-								<a href="https://vietnamthoibao.org/vntb-ghi-chep-chuyen-no-xo-chuyen-kia/" class="info-line">
-									<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;11.04.2021 1:02</span>
+								<h3><a href="https://vietnamthoibao.org/vntb-bat-ba-nguyen-thuy-hanh-nha-nuoc-muon-xoa-bo-quyen-tu-do-ngon-luan/">VNTB – Bắt bà Nguyễn Thúy Hạnh: Nhà nước muốn xóa bỏ quyền tự do ngôn luận</a></h3>
+								<a href="https://vietnamthoibao.org/vntb-bat-ba-nguyen-thuy-hanh-nha-nuoc-muon-xoa-bo-quyen-tu-do-ngon-luan/" class="info-line">
+									<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;11.04.2021 2:52</span>
 									<span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span>
 								</a>
 							</div>
 						</div>
 						<div class="item-content">
-							<p>Nguyễn Nam &nbsp; (VNTB) – Miền Nam quá thiệt thòi &nbsp; Người Việt Nam rất giỏi và rất thông minh,</p>
+							<p>Ngọc Vân &nbsp; (VNTB) –&nbsp;Có lẽ Chế độ bắt đầu run sợ trước viễn cảnh phải đối diện với hàng</p>
 						</div>
 					</div>
-					<div class="item">
-						<a href="https://vietnamthoibao.org/vntb-biem-hoa-duc-vua-van-tue-2/">
-							<img data-lazyloaded="1" src="./assets/Facebook-ở-Úc--60x60_c.png" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Facebook-ở-Úc--60x60_c.png" alt="VNTB – Biếm Hoạ: Đức vua vạn tuế" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Facebook-ở-Úc--60x60_c.png" alt="VNTB &#8211; Biếm Hoạ: Đức vua vạn tuế" /></noscript> </a>
-						<div class="item-content">
-							<h3><a href="https://vietnamthoibao.org/vntb-biem-hoa-duc-vua-van-tue-2/">VNTB – Biếm Hoạ: Đức vua vạn tuế</a></h3>
-							<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;11.04.2021 12:01</span>
-							<a href="https://vietnamthoibao.org/vntb-biem-hoa-duc-vua-van-tue-2/#comments"><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span></a>
+					@if($articles)
+						@foreach($articles as $article)
+						<div class="item">
+							<a href="{{route('detail',['id'=>$article->id])}}">
+								<img src="{{$article->background}}" class="item-photo litespeed-loaded" >
+							</a>
+							<div class="item-content">
+								<h3><a href="{{route('detail',['id'=>$article->id])}}">{{$article->title}}</a></h3>
+								<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;10.04.2021 3:03</span>
+								<a href="{{route('detail',['id'=>$article->id])}}"><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span></a>
 
+							</div>
 						</div>
-					</div>
-
-					<div class="item">
-						<a href="https://vietnamthoibao.org/vntb-truyen-cuoi-bai-hoc-lon/">
-							<img data-lazyloaded="1" src="./assets/Chiến-tranh-Việt-Trung-1979-60x60_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Chiến-tranh-Việt-Trung-1979-60x60_c.jpg" alt="VNTB – Truyện cười: Bài học lớn" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Chiến-tranh-Việt-Trung-1979-60x60_c.jpg" alt="VNTB &#8211; Truyện cười: Bài học lớn" /></noscript> </a>
-						<div class="item-content">
-							<h3><a href="https://vietnamthoibao.org/vntb-truyen-cuoi-bai-hoc-lon/">VNTB – Truyện cười: Bài học lớn</a></h3>
-							<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;10.04.2021 12:10</span>
-							<a href="https://vietnamthoibao.org/vntb-truyen-cuoi-bai-hoc-lon/#comments"><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span></a>
-
-						</div>
-					</div>
-
+						@endforeach
+					@endif
 				</div>
 				<!-- END .panel -->
 			</div>
@@ -358,42 +263,35 @@
 				<div class="article-list">
 					<div class="item main-artice">
 						<div class="item-header">
-							<a href="https://vietnamthoibao.org/vntb-an-xa-quoc-te-yeu-cau-chinh-phu-viet-nam-tra-tu-do-cho-ba-nguyen-thuy-hanh/">
-								<img data-lazyloaded="1" src="./assets/Nguyễn-Thuý-Hạnh-1-541x311_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Nguyễn-Thuý-Hạnh-1-541x311_c.jpg" alt="VNTB – Ân xá Quốc tế yêu cầu chính phủ Việt Nam trả tự do cho bà Nguyễn Thuý Hạnh" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Nguyễn-Thuý-Hạnh-1-541x311_c.jpg" alt="VNTB &#8211; Ân xá Quốc tế yêu cầu chính phủ Việt Nam trả tự do cho bà Nguyễn Thuý Hạnh" /></noscript> </a>
+							<a href="https://vietnamthoibao.org/vntb-bat-ba-nguyen-thuy-hanh-nha-nuoc-muon-xoa-bo-quyen-tu-do-ngon-luan/">
+								<img data-lazyloaded="1" src="./assets/Nguyễn-Thuý-Hạnh-2-541x311_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Nguyễn-Thuý-Hạnh-2-541x311_c.jpg" alt="VNTB – Bắt bà Nguyễn Thúy Hạnh: Nhà nước muốn xóa bỏ quyền tự do ngôn luận" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Nguyễn-Thuý-Hạnh-2-541x311_c.jpg" alt="VNTB &#8211; Bắt bà Nguyễn Thúy Hạnh: Nhà nước muốn xóa bỏ quyền tự do ngôn luận" /></noscript> </a>
 							<div class="article-slide">
-								<h3><a href="https://vietnamthoibao.org/vntb-an-xa-quoc-te-yeu-cau-chinh-phu-viet-nam-tra-tu-do-cho-ba-nguyen-thuy-hanh/">VNTB – Ân xá Quốc tế yêu cầu chính phủ Việt Nam trả tự do cho bà Nguyễn Thuý Hạnh</a></h3>
-								<a href="https://vietnamthoibao.org/vntb-an-xa-quoc-te-yeu-cau-chinh-phu-viet-nam-tra-tu-do-cho-ba-nguyen-thuy-hanh/" class="info-line">
-									<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;10.04.2021 3:18</span>
+								<h3><a href="https://vietnamthoibao.org/vntb-bat-ba-nguyen-thuy-hanh-nha-nuoc-muon-xoa-bo-quyen-tu-do-ngon-luan/">VNTB – Bắt bà Nguyễn Thúy Hạnh: Nhà nước muốn xóa bỏ quyền tự do ngôn luận</a></h3>
+								<a href="https://vietnamthoibao.org/vntb-bat-ba-nguyen-thuy-hanh-nha-nuoc-muon-xoa-bo-quyen-tu-do-ngon-luan/" class="info-line">
+									<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;11.04.2021 2:52</span>
 									<span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span>
 								</a>
 							</div>
 						</div>
 						<div class="item-content">
-							<p>Trả lời về vụ bắt giữ tùy tiện nhà bảo vệ nhân quyền Việt Nam nổi tiếng Nguyễn Thúy Hạnh</p>
+							<p>Ngọc Vân &nbsp; (VNTB) –&nbsp;Có lẽ Chế độ bắt đầu run sợ trước viễn cảnh phải đối diện với hàng</p>
 						</div>
 					</div>
-					<div class="item">
-						<a href="https://vietnamthoibao.org/vntb-malaysia-viet-nam-chuan-bi-ky-hiep-dinh-an-ninh-hang-hai/">
-							<img data-lazyloaded="1" src="./assets/2021-04-07-Tàu-chiến-Mỹ-ở-Biển-Dông-60x60_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/2021-04-07-Tàu-chiến-Mỹ-ở-Biển-Dông-60x60_c.jpg" alt="VNTB – Malaysia, Việt Nam Chuẩn bị Ký Hiệp định An ninh Hàng hải" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/2021-04-07-Tàu-chiến-Mỹ-ở-Biển-Dông-60x60_c.jpg" alt="VNTB &#8211; Malaysia, Việt Nam Chuẩn bị Ký Hiệp định An ninh Hàng hải" /></noscript> </a>
-						<div class="item-content">
-							<h3><a href="https://vietnamthoibao.org/vntb-malaysia-viet-nam-chuan-bi-ky-hiep-dinh-an-ninh-hang-hai/">VNTB – Malaysia, Việt Nam Chuẩn bị Ký Hiệp định An ninh Hàng hải</a></h3>
-							<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;09.04.2021 2:42</span>
-							<a href="https://vietnamthoibao.org/vntb-malaysia-viet-nam-chuan-bi-ky-hiep-dinh-an-ninh-hang-hai/#comments"><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span></a>
+					@if($articles)
+						@foreach($articles as $article)
+						<div class="item">
+							<a href="{{route('detail',['id'=>$article->id])}}">
+								<img src="{{$article->background}}" class="item-photo litespeed-loaded" >
+							</a>
+							<div class="item-content">
+								<h3><a href="{{route('detail',['id'=>$article->id])}}">{{$article->title}}</a></h3>
+								<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;10.04.2021 3:03</span>
+								<a href="{{route('detail',['id'=>$article->id])}}"><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span></a>
 
+							</div>
 						</div>
-					</div>
-
-					<div class="item">
-						<a href="https://vietnamthoibao.org/44431-2/">
-							<img data-lazyloaded="1" src="./assets/Phạm-Minh-Chính-60x60_c.jpg" class="item-photo litespeed-loaded" data-src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Phạm-Minh-Chính-60x60_c.jpg" alt="VNTB – Tân Thủ Tướng Việt Nam sẽ không tạo bất ngờ trong cách tiếp cận với Hoa Kỳ và Trung Quốc" style="opacity: 1;" data-was-processed="true"><noscript><img class="item-photo" src="http://vietnamthoibao.org/wp-content/uploads/2021/04/Phạm-Minh-Chính-60x60_c.jpg" alt="VNTB &#8211; Tân Thủ Tướng Việt Nam sẽ không tạo bất ngờ trong cách tiếp cận với Hoa Kỳ và Trung Quốc" /></noscript> </a>
-						<div class="item-content">
-							<h3><a href="https://vietnamthoibao.org/44431-2/">VNTB – Tân Thủ Tướng Việt Nam sẽ không tạo bất ngờ trong cách tiếp cận với Hoa Kỳ và Trung Quốc</a></h3>
-							<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;08.04.2021 6:20</span>
-							<a href="https://vietnamthoibao.org/44431-2/#comments"><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;0 Comments</span></a>
-
-						</div>
-					</div>
-
+						@endforeach
+					@endif
 				</div>
 				<!-- END .panel -->
 			</div>

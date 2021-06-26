@@ -8,6 +8,13 @@ use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
+    public function detail($id) {
+        $article = Article::findOrFail($id);
+        return view('detail',['article'=>$article]);
+    }
+
+    
+
     public function index(){
         $article = new Article;
         $articles = $article::all();
