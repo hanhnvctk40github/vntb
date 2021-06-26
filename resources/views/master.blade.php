@@ -1454,8 +1454,9 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	</style>
 	<link rel="stylesheet" id="yarppRelatedCss-css" href="{{asset('assets/related.css')}}" type="text/css" media="all">
-	<link rel="stylesheet" href="{{asset('assets/ipad.css')}}" type="text/css">
+	
 	<link rel="stylesheet" href="{{asset('assets/phone.css')}}" type="text/css">
+	<link rel="stylesheet" href="{{asset('assets/ipad.css')}}" type="text/css">
 	<script type="text/javascript" src="{{asset('assets/core.min.js.download')}}" id="jquery-ui-core-js"></script>
 	<script type="text/javascript" src="{{asset('assets/jquery.floating_popup.1.3.min.js.download')}}" id="banner-js"></script>
 	<script type="text/javascript" src="{{asset('assets/theme-scripts.js.download')}}" id="/wp-content/themes/novomag-theme/js/-scripts-js"></script>
