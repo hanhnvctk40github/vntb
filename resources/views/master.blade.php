@@ -252,168 +252,181 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
 			text-align: justify;
 		}
 	</style>
-<style>
-            @-webkit-keyframes bgslide {
-                from {
-                    background-position-x: 0;
-                }
-                to {
-                    background-position-x: -200%;
-                }
-            }
+	<style>
+		@-webkit-keyframes bgslide {
+			from {
+				background-position-x: 0;
+			}
 
-            @keyframes bgslide {
-                    from {
-                        background-position-x: 0;
-                    }
-                    to {
-                        background-position-x: -200%;
-                    }
-            }
+			to {
+				background-position-x: -200%;
+			}
+		}
 
-            .wpp-widget-placeholder {
-                margin: 0 auto;
-                width: 60px;
-                height: 3px;
-                background: #dd3737;
-                background: -webkit-gradient(linear, left top, right top, from(#dd3737), color-stop(10%, #571313), to(#dd3737));
-                background: linear-gradient(90deg, #dd3737 0%, #571313 10%, #dd3737 100%);
-                background-size: 200% auto;
-                border-radius: 3px;
-                -webkit-animation: bgslide 1s infinite linear;
-                animation: bgslide 1s infinite linear;
-            }
-        </style>
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://vietnamthoibao.org/rsslatest.xml" />		<style type="text/css" id="wp-custom-css">
-			.main-menu ul.menu > li ul.sub-menu > li > a, .main-menu ul.menu > li > a {
-	color: #444;
-	font-weight: bold;
-}
+		@keyframes bgslide {
+			from {
+				background-position-x: 0;
+			}
 
-.main-menu ul.menu > li:hover > a {
-border-bottom: 3px solid #084482;
-    margin-bottom: -3px;
-}
+			to {
+				background-position-x: -200%;
+			}
+		}
 
+		.wpp-widget-placeholder {
+			margin: 0 auto;
+			width: 60px;
+			height: 3px;
+			background: #dd3737;
+			background: -webkit-gradient(linear, left top, right top, from(#dd3737), color-stop(10%, #571313), to(#dd3737));
+			background: linear-gradient(90deg, #dd3737 0%, #571313 10%, #dd3737 100%);
+			background-size: 200% auto;
+			border-radius: 3px;
+			-webkit-animation: bgslide 1s infinite linear;
+			animation: bgslide 1s infinite linear;
+		}
+	</style>
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="https://vietnamthoibao.org/rsslatest.xml" />
+	<style type="text/css" id="wp-custom-css">
+		.main-menu ul.menu>li ul.sub-menu>li>a,
+		.main-menu ul.menu>li>a {
+			color: #444;
+			font-weight: bold;
+		}
 
-.header {
-	background: #084482;
-}
-
-.article-list .item .item-header .article-slide .info-line {
-	background: #084482;
-}
+		.main-menu ul.menu>li:hover>a {
+			border-bottom: 3px solid #084482;
+			margin-bottom: -3px;
+		}
 
 
-@media only screen and (max-width: 600px) {
+		.header {
+			background: #084482;
+		}
 
-	.demo-settings {
-		display: none!important;
-	}
-
-	.header-block > div {
-		display: block;
-		width: 180%!important;
-		text-align: left;
-		padding: 10px 0;
-	}
-
-	.header-block .header-banner img {
-		width: 80%!important;
-	}
-
-	.header-block .header-logo img {
-		width: auto;
-		max-width: 56%;
-	}
-	
-	.header-topmenu {
-			display: none!important;
-	}
-}
-
-@media only screen and (max-width: 900px) {
-		.header-topmenu {
-			display: none!important;
-	}
-}
+		.article-list .item .item-header .article-slide .info-line {
+			background: #084482;
+		}
 
 
-#sidebar .widget > .w-title h3 {
-	font-size: 16px;
-	 text-transform: capitalize;
-}
+		@media only screen and (max-width: 600px) {
 
-.content .panel > .p-title h2{
-		
-	 text-transform: uppercase;
-}
+			.demo-settings {
+				display: none !important;
+			}
 
-.main-menu ul.menu { 
-	background: #F0f0f0!important;
-}
+			.header-block>div {
+				display: block;
+				width: 180% !important;
+				text-align: left;
+				padding: 10px 0;
+			}
+
+			.header-block .header-banner img {
+				width: 80% !important;
+			}
+
+			.header-block .header-logo img {
+				width: auto;
+				max-width: 56%;
+			}
+
+			.header-topmenu {
+				display: none !important;
+			}
+		}
+
+		@media only screen and (max-width: 900px) {
+			.header-topmenu {
+				display: none !important;
+			}
+		}
 
 
-.main-menu .search-block .search-value {
-color: #000!important;	
-}
+		#sidebar .widget>.w-title h3 {
+			font-size: 16px;
+			text-transform: capitalize;
+		}
 
-.main-menu .search-block .search-button {
-	background: #fff!important;
-}
+		.content .panel>.p-title h2 {
 
-.main-menu .search-block form {
-	background: #fff!important;
-}
+			text-transform: uppercase;
+		}
 
-.shortcode-content .panel { 
-visibility:hidden!important;	
-}
+		.main-menu ul.menu {
+			background: #F0f0f0 !important;
+		}
 
-.review-photo img {
-    max-width: 200%;
-    height: auto;
-}
 
-@media only screen and (max-width: 900px) {
-	.review-photo img {
-    max-width: 100%!important;
-    height: auto!important;
-	}
-}
-	
-@media only screen and (max-width: 900px) {
-.content .panel > .p-title, #sidebar .widget > .w-title {
-    display: block;
-    background: #ededed;
-    position: relative;
-    margin-bottom: -35px;
-	}
-}
+		.main-menu .search-block .search-value {
+			color: #000 !important;
+		}
 
-@media only screen and (max-width: 900px) {
-body .toggle-menu {
-    display: block;
-    color: grey;
-	}
-}
+		.main-menu .search-block .search-button {
+			background: #fff !important;
+		}
 
-@media only screen and (max-width: 600px) {
-body .toggle-menu {
-    display: block;
-    color: grey;
-	}
-}
+		.main-menu .search-block form {
+			background: #fff !important;
+		}
 
-p {
+		.shortcode-content .panel {
+			visibility: hidden !important;
+		}
 
-    font-size: 115%!important;
-	 text-align: justify;
-	
-}
-h1, h2, h3, h4, h5, h6 {
-		 text-align: justify;
-	}		</style>
+		.review-photo img {
+			max-width: 200%;
+			height: auto;
+		}
+
+		@media only screen and (max-width: 900px) {
+			.review-photo img {
+				max-width: 100% !important;
+				height: auto !important;
+			}
+		}
+
+		@media only screen and (max-width: 900px) {
+
+			.content .panel>.p-title,
+			#sidebar .widget>.w-title {
+				display: block;
+				background: #ededed;
+				position: relative;
+				margin-bottom: -35px;
+			}
+		}
+
+		@media only screen and (max-width: 900px) {
+			body .toggle-menu {
+				display: block;
+				color: grey;
+			}
+		}
+
+		@media only screen and (max-width: 600px) {
+			body .toggle-menu {
+				display: block;
+				color: grey;
+			}
+		}
+
+		p {
+
+			font-size: 115% !important;
+			text-align: justify;
+
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			text-align: justify;
+		}
+	</style>
 	<!-- START - Open Graph and Twitter Card Tags 3.1.1 -->
 	<!-- Facebook Open Graph -->
 	<meta property="og:locale" content="vi_VN">
@@ -1117,6 +1130,9 @@ h1, h2, h3, h4, h5, h6 {
 				transform: translateY(0)
 			}
 		}
+		.menu.menu.show {
+			display: block !important;
+		}
 	</style>
 	<link rel="stylesheet" href="{{asset('assets/css/custom.css')}}" type="text/css">
 </head>
@@ -1144,7 +1160,7 @@ h1, h2, h3, h4, h5, h6 {
 						<li id="menu-item-28232" class="menu-item menu-item-type-post_type menu-item-object-page single"><a href="/huong-dan-gui-bai/">Hướng dẫn gửi bài</a></li>
 						<li id="menu-item-18447" class="menu-item menu-item-type-taxonomy menu-item-object-category single"><a href="/category/english-only/">English only</a></li>
 					</ul> <!-- END .wrapper -->
-					<a href="/#" class="toggle-menu"><i class="fa fa-bars"></i> Toggle Menu</a>
+					<a href="#" class="toggle-menu"><i class="fa fa-bars"></i> Toggle Menu</a>
 				</div>
 
 			</div>
@@ -1154,7 +1170,7 @@ h1, h2, h3, h4, h5, h6 {
 
 				<div class="header-block">
 					<div class="header-logo">
-						<a href="/"><img src="{{asset('assets/header-logo.png')}}" ></a>
+						<a href="/"><img src="{{asset('assets/header-logo.png')}}" /></a>
 					</div>
 
 				</div>
@@ -1179,7 +1195,7 @@ h1, h2, h3, h4, h5, h6 {
 						<li id="menu-item-1454" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/world/" style="border-bottom: 3px solid #214a82; ">Thế Giới</a></li>
 						<li id="menu-item-1472" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/ijavn/" style="border-bottom: 3px solid #214a82; ">Về Hội</a></li>
 					</ul> <!-- END .wrapper -->
-					<a href="/#" class="toggle-menu"><i class="fa fa-bars"></i> Toggle Menu</a>
+					<a href="#" class="toggle-menu"><i class="fa fa-bars"></i> Toggle Menu</a>
 				</div>
 
 			</nav>
@@ -1203,11 +1219,11 @@ h1, h2, h3, h4, h5, h6 {
 						<div class="breaking-block">
 							<ul style="left: -1364px;">
 								@if(isset($mostReadArticles) && $mostReadArticles)
-									@foreach($mostReadArticles as $article)
-									<li>
+								@foreach($mostReadArticles as $article)
+								<li>
 									<h4><a href="{{route('detail',['id'=>$article->id])}}">VNTB – {{$article->title}}</a></h4><i class="fa fa-exclamation"></i>
 								</li>
-									@endforeach
+								@endforeach
 								@endif
 								<li>
 									<h4><a href="/">VNTB – Bắt bà Nguyễn Thúy Hạnh: Nhà nước muốn xóa bỏ quyền tự do ngôn luận</a></h4><i class="fa fa-exclamation"></i>
@@ -1246,7 +1262,8 @@ h1, h2, h3, h4, h5, h6 {
 							<h3>Đăng ký thành viên</h3>
 						</div>
 						<div class="textwidget custom-html-widget">
-							<a href="/"><img src="{{asset('assets/member.jpg')}}"></a></div>
+							<a href="/" style="display: block; margin-top: 30px"><img src="{{asset('assets/member.jpg')}}" /></a>
+						</div>
 					</div>
 					<!-- <div class="widget-2 widget">
 						<form method="get" action="/" name="searchform">
@@ -1265,12 +1282,12 @@ h1, h2, h3, h4, h5, h6 {
 
 						<ul class="wpp-list wpp-list-with-thumbnails">
 							@if(isset($mostReadArticles) && $mostReadArticles)
-								@foreach($mostReadArticles as $article)
-								<li>
-									<a href="{{route('detail',['id'=>$article->id])}}"><img src="{{$article->background_image}}"></a>
-									<a href="{{route('detail',['id'=>$article->id])}}" class="wpp-post-title" target="_self">VNTB – {{$article->title}}</a>
-								</li>
-								@endforeach
+							@foreach($mostReadArticles as $article)
+							<li>
+								<a href="{{route('detail',['id'=>$article->id])}}"><img src="{{$article->background_image}}" /></a>
+								<a href="{{route('detail',['id'=>$article->id])}}" class="wpp-post-title" target="_self">VNTB – {{$article->title}}</a>
+							</li>
+							@endforeach
 							@endif
 						</ul>
 
@@ -1315,7 +1332,7 @@ h1, h2, h3, h4, h5, h6 {
 						<div class="textwidget custom-html-widget">
 							<p>
 								<a href="https://www.proxysite.com/" target="_blank" rel="noopener noreferrer">
-								<img src="{{asset('assets/logo-proxysite.png')}}">
+									<img src="{{asset('assets/logo-proxysite.png')}}" />
 								</a>
 							</p>
 
@@ -1354,12 +1371,21 @@ h1, h2, h3, h4, h5, h6 {
 			<div class="loading-box">
 				<h3>Loading, Please Wait!</h3>
 				<span>This may take a second or two.</span>
-				<span class="loading-image"><img data-lazyloaded="1" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="/wp-content/themes/novomag-theme/images/loading.gif" title="Loading" alt="Loading" style="opacity: 1;"><noscript><img src="/wp-content/themes/novomag-theme/images/loading.gif" title="Loading" alt="Loading" /></noscript></span>
+				<span class="loading-image">
+					<img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=">
+					<img src="" title="Loading" alt="Loading" /></span>
 			</div>
 		</div>
 		<div class="lightcontent"></div>
 	</div>
-
+	<script>
+		var menuEles = document.querySelectorAll('.toggle-menu');
+		for (const menuEle of menuEles) {
+			menuEle.addEventListener('click', function() {
+				document.querySelector('.menu.menu').classList.toggle('show');
+			});
+		}
+	</script>
 
 	<script>
 		var _otSliderAuto = true;
@@ -1455,9 +1481,12 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	</style>
 	<link rel="stylesheet" id="yarppRelatedCss-css" href="{{asset('assets/related.css')}}" type="text/css" media="all">
-	
-	<link rel="stylesheet" href="{{asset('assets/phone.css')}}" type="text/css">
+
+	<link rel="stylesheet" href="{{asset('assets/desktop.css')}}" type="text/css">
 	<link rel="stylesheet" href="{{asset('assets/ipad.css')}}" type="text/css">
+	<link rel="stylesheet" href="{{asset('assets/phone.css')}}" type="text/css">
+
+
 	<script type="text/javascript" src="{{asset('assets/core.min.js.download')}}" id="jquery-ui-core-js"></script>
 	<script type="text/javascript" src="{{asset('assets/jquery.floating_popup.1.3.min.js.download')}}" id="banner-js"></script>
 	<script type="text/javascript" src="{{asset('assets/theme-scripts.js.download')}}" id="/wp-content/themes/novomag-theme/js/-scripts-js"></script>

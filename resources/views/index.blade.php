@@ -13,7 +13,7 @@
 							<p>Nguyễn Nam &nbsp; (VNTB) – Miền Nam quá thiệt thòi</p>
 						</span>
 					</span>
-					<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="setborder">
+					<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="setborder" />
 				</a>
 				@endif
 			</div>
@@ -50,7 +50,7 @@
 
 				<div class="item-header">
 					<a href="{{route('detail',['id'=>$article->id])}}" class="overset-image load-effect">
-							<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded">
+							<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded" />
 					</a>
 		</div>
 		<div class="item-content">
@@ -100,7 +100,7 @@
 				@foreach($articles as $article)
 				<div class="item">
 					<a href="{{route('detail',['id'=>$article->id])}}">
-						<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded">
+						<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded"/>
 					</a>
 					<div class="item-content">
 						<h3><a href="{{route('detail',['id'=>$article->id])}}">{{$article->title}}</a></h3>
@@ -150,7 +150,7 @@
 				@foreach($articles as $article)
 				<div class="item">
 					<a href="{{route('detail',['id'=>$article->id])}}">
-						<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded">
+						<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded"/>
 					</a>
 					<div class="item-content">
 						<h3><a href="{{route('detail',['id'=>$article->id])}}">{{$article->title}}</a></h3>
@@ -202,7 +202,7 @@
 				@foreach($articles as $article)
 				<div class="item">
 					<a href="{{route('detail',['id'=>$article->id])}}">
-						<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded">
+						<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded"/>
 					</a>
 					<div class="item-content">
 						<h3><a href="{{route('detail',['id'=>$article->id])}}">{{$article->title}}</a></h3>
@@ -252,7 +252,7 @@
 				@foreach($articles as $article)
 				<div class="item">
 					<a href="{{route('detail',['id'=>$article->id])}}">
-						<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded">
+						<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded"/>
 					</a>
 					<div class="item-content">
 						<h3><a href="{{route('detail',['id'=>$article->id])}}">{{$article->title}}</a></h3>
@@ -284,7 +284,7 @@
 		<div class="item post-44325 post type-post status-publish format-standard has-post-thumbnail hentry category-economy category-news category-vntb tag-doan-hung-quoc tag-gia-tri-kinh-te tag-joe-biden tag-kinh-te-de-hieu">
 			<div class="item-header">
 				<a href="{{route('detail',['id'=>$article->id])}}" class="item-photo">
-					<img src="{{asset('assets/upload/article/'.$article->background_image)}}"></a>
+					<img src="{{asset('assets/upload/article/'.$article->background_image)}}"/></a>
 				<h3>
 					<a href="{{route('detail',['id'=>$article->id])}}">VNTB – {{$article->title}}</a>
 				</h3>
@@ -319,7 +319,7 @@
 		<div class="item post-44325 post type-post status-publish format-standard has-post-thumbnail hentry category-economy category-news category-vntb tag-doan-hung-quoc tag-gia-tri-kinh-te tag-joe-biden tag-kinh-te-de-hieu">
 			<div class="item-header">
 				<a href="{{route('detail',['id'=>$article->id])}}" class="item-photo">
-					<img src="{{asset('assets/upload/article/'.$article->background_image)}}"></a>
+					<img src="{{asset('assets/upload/article/'.$article->background_image)}}"/></a>
 				<h3>
 					<a href="{{route('detail',['id'=>$article->id])}}">VNTB – {{$article->title}}</a>
 				</h3>
@@ -364,7 +364,7 @@
 
 			<div class="item-header">
 				<a href="{{route('detail',['id'=>$article->id])}}" class="overset-image load-effect">
-					<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded">
+					<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded"/>
 				</a>
 			</div>
 			<div class="item-content">
@@ -396,7 +396,7 @@
 					<div class="item main-artice">
 						<div class="item-header">
 							<a href="{{route('detail',['id'=>$article->id])}}">
-								<img src="{{asset('assets/upload/article/'.$article->background_image)}}"></a>
+								<img src="{{asset('assets/upload/article/'.$article->background_image)}}"/></a>
 							<div class="article-slide">
 								<h3><a href="{{route('detail',['id'=>$article->id])}}">VNTB – {{$article->title}}</a></h3>
 								<a href="{{route('detail',['id'=>$article->id])}}" class="info-line">
@@ -418,7 +418,7 @@
 					@foreach($articles as $article)
 					<div class="item">
 						<a href="{{route('detail',['id'=>$article->id])}}">
-							<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded"></a>
+							<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded"/></a>
 						<div class="item-content">
 							<h3><a href="{{route('detail',['id'=>$article->id])}}">VNTB – {{$article->title}}</a></h3>
 							<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($article->created_at))}}</span>
