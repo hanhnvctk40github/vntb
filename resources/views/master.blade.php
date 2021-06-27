@@ -1118,6 +1118,7 @@ h1, h2, h3, h4, h5, h6 {
 			}
 		}
 	</style>
+	<link rel="stylesheet" href="{{asset('assets/css/custom.css')}}" type="text/css">
 </head>
 
 <!-- BEGIN body -->
@@ -1245,7 +1246,7 @@ h1, h2, h3, h4, h5, h6 {
 							<h3>Đăng ký thành viên</h3>
 						</div>
 						<div class="textwidget custom-html-widget">
-							<a href="https://proxysite.xyz/"><img src="{{asset('assets/member.jpg')}}"></a></div>
+							<a href="/"><img src="{{asset('assets/member.jpg')}}"></a></div>
 					</div>
 					<!-- <div class="widget-2 widget">
 						<form method="get" action="/" name="searchform">
