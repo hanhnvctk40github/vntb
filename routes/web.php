@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InfoController;
 use App\Http\Middleware\Auth;
 
 /*
@@ -36,4 +37,5 @@ Route::prefix('/admin')->middleware([Auth::class])->group(function () {
        Route::get('/article/delete/{id}', [ArticleController::class, 'delete'])->name('admin.article.delete');
    
        Route::post('/article/upload', [ArticleController::class, 'upload'])->name('admin.article.upload');
+       Route::get('/info', [InfoController::class, 'index'])->name('admin.info.index');
 });

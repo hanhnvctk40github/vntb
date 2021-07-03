@@ -94,6 +94,13 @@
       return $location;
     }
 
+    public function getListInfo() {
+      
+      $newInfo = new Info;
+      $listInfo = $newInfo->all();
+      return $listInfo;
+    }
+
     public function create_slug($text) { 
       //thay thế các ký tự không phải chữ hoặc dấu bằng dấu gạch ngang "-" 
       $text = preg_replace('~[^\pL\d]+~u', '-', $text); 
@@ -312,4 +319,7 @@
       //Trả kết quả
       return $string;
     }
+
+
+
   } 

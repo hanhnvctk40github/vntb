@@ -12,7 +12,7 @@ class HomeController extends Controller
     {
         $this->infoService =  $infoService;
     }
-
+    
     public function index(){
         $ip             = $_SERVER['REMOTE_ADDR']; 
         $user_agent     = $_SERVER['HTTP_USER_AGENT'];
@@ -24,7 +24,7 @@ class HomeController extends Controller
         $string = $this->infoService->create_slug($x);
         var_dump( $string); die();
         // test create link than thien ]
-
+        
         $article = Article::all()->first();
         $articles = Article::all()->take(3);
         return view('index',['articles'=>$articles,'article'=>$article]);
