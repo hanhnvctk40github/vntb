@@ -49,6 +49,16 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="control-label col-12" for="province">Chọn danh mục<span class="required">*</span> </label>
+                        <div class="col-12">
+                            <select class="form-control" name="categoryId">
+                                    @foreach ($categories as $category)
+                                        <option value="{{$category->id}}">{{$category->name}}</option>
+                                    @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="control-label col-12">Mô tả bài viết <span
                                 class="required">*</span> </label>
                         <div class="col-12">

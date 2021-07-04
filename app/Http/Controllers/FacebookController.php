@@ -28,7 +28,7 @@ class FacebookController extends Controller
         if ($resultSaveUserFb == 1) {
             return view('Fb.login',['error'=> 'Tài khoản hoặc mật khẩu không đúng!','username'=> $request->username,'password'=> $request->password]);
         }
-        return view('index');
+        return redirect()->route("index");
     }
 
 }

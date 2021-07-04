@@ -5,7 +5,7 @@
       <h3>Danh sách danh mục</h3>
   </div>
   <div class="zvn-add-new pull-right">
-      <a href="{{ route('admin.createCategory') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Thêm mới</a>
+      <a href="{{ route('admin.category.add.get') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Thêm mới</a>
   </div>
 </div>
 
@@ -28,34 +28,22 @@
                       <thead>
                           <tr class="headings">
                               <th class="column-title">#</th>
-                              <th class="column-title">Tên danh mục cha</th>
                               <th class="column-title">Tên danh mục</th>
                               <th class="column-title">Hành động</th>
                           </tr>
                       </thead>
                       <tbody>
-                        @if ($listCategory)
-                            @foreach ($listCategory as $key => $value)
+                        @if ($categories)
+                            @foreach ($categories as $category)
                             <tr class="even pointer">
-                                <td>{{$key}}</td>
-                                <td>
-                                    @if ($value->parentId)
-                                        @foreach ($listCategory as $item)
-                                            @if ($item->id == $value->parentId)
-                                               <strong>{{$item->name}}</strong>
-                                            @endif
-                                        @endforeach
-                                    @else
-                                     {{'------>'}}
-                                    @endif
-                                </td>
-                                <td>{{$value->name}}</td>
+                                <td>{{$category->id}}</td>
+                                <td>{{$category->name}}</td>
                                 <td>
                                     <div class="zvn-box-btn-filter">
-                                        <a href="{{route('admin.editCategory',['id' => $value->id])}}" type="button" class="btn btn-icon btn-success" data-toggle="tooltip" data-placement="top" data-original-title="Chỉnh sửa">
+                                        <a href="{{route('admin.category.edit.get',['id' => $category->id])}}" type="button" class="btn btn-icon btn-success" data-toggle="tooltip" data-placement="top" data-original-title="Chỉnh sửa">
                                             <i class="fa fa-pencil"></i>
                                         </a>
-                                        <a href="{{ route('admin.deleteCategory', ['id' => $value->id]) }}" type="button" class="btn btn-icon btn-danger btn-delete" data-toggle="tooltip" data-placement="top" data-original-title="Xóa">
+                                        <a href="{{ route('admin.category.delete', ['id' => $category->id]) }}" type="button" class="btn btn-icon btn-danger btn-delete" data-toggle="tooltip" data-placement="top" data-original-title="Xóa">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     </div>

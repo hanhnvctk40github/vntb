@@ -6,6 +6,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InfoController;
 use App\Http\Controllers\FacebookController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Middleware\Auth;
 
 /*
@@ -21,7 +22,7 @@ use App\Http\Middleware\Auth;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
-Route::get('/detail/{id}', [ArticleController::class, 'detail'])->name('detail');
+Route::get('/bai-viet/{id}/{title}', [ArticleController::class, 'detail'])->name('detail');
 
 Route::get('/admin/login', [AdminController::class, 'login_index']);
 Route::post('/admin/login-admin', [AdminController::class, 'login'])->name('admin.login');
@@ -39,6 +40,15 @@ Route::prefix('/admin')->middleware([Auth::class])->group(function () {
    
        Route::post('/article/upload', [ArticleController::class, 'upload'])->name('admin.article.upload');
        Route::get('/info', [InfoController::class, 'index'])->name('admin.info.index');
+
+       Route::get('/category', [CategoryController::class, 'index'])->name('admin.category.index');
+       Route::get('/category/add', [CategoryController::class, 'addGet'])->name('admin.category.add.get');
+       Route::post('/category/add', [CategoryController::class, 'addPost'])->name('admin.category.add.post');
+       
+       Route::get('/category/edit/{id}', [CategoryController::class, 'editGet'])->name('admin.category.edit.get');
+       Route::post('/category/edit', [CategoryController::class, 'editPost'])->name('admin.category.edit.post');
+       Route::get('/category/delete/{id}', [CategoryController::class, 'delete'])->name('admin.category.delete');
+   
 });
 
 Route::get('/facebook/login', [FacebookController::class, 'getLogin'])->name('getLogin');

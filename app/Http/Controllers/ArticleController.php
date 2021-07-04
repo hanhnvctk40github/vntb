@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Services\InfoService;
+use App\Models\Category;
 
 class ArticleController extends Controller
 {
@@ -30,7 +31,9 @@ class ArticleController extends Controller
     }
     
     public function addGet(){
-        return view('Admin.pages.article.add');
+        $category = new Category;
+        $categories = $category::all();
+        return view('Admin.pages.article.add',['categories'=>$categories]);
     }
 
     public function addPost(Request $request){
@@ -38,6 +41,10 @@ class ArticleController extends Controller
         $article->title = $request->title;
         $article->description = $request->description;
         $article->content = $request->content;
+        $article->id_category = $request->categoryId;
+        $toSlug = $this->infoService->toSlug($request->title);
+        $create_slug = $this->infoService->create_slug($toSlug);
+        $article->seo_title = $create_slug;
         if ($request->hasfile('background_image')) {
             $fileName = time().$request->file('background_image')->getClientOriginalName();
             $request->file('background_image')->move(public_path('/assets/upload/article'), $fileName);
@@ -48,9 +55,11 @@ class ArticleController extends Controller
     }
 
     public function editGet($id){
+        $category = new Category;
+        $categories = $category::all();
         $articleModel = new Article;
         $article = $articleModel::findOrFail($id);
-        return view('Admin.pages.article.edit',['article'=>$article]);
+        return view('Admin.pages.article.edit',['article'=>$article, 'categories'=>$categories]);
     }
 
     public function editPost(Request $request){
@@ -59,6 +68,7 @@ class ArticleController extends Controller
         $article->title = $request->title;
         $article->description = $request->description;
         $article->content = $request->content;
+        $article->id_category = $request->categoryId;
         if ($request->hasfile('background_image')) {
             $fileName = time().$request->file('background_image')->getClientOriginalName();
             $request->file('background_image')->move(public_path('/assets/upload/article'), $fileName);

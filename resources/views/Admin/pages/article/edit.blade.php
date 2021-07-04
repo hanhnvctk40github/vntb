@@ -29,13 +29,6 @@
             </div>
             <div class="x_content">
                 <br />
-                {{-- <div class="alert alert-danger alert-dismissible fade in zvn-alert" role="alert">
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-                  <strong><i class="fa fa-exclamation-triangle"></i> Xảy ra lỗi!</strong>
-                  <p><strong>- Tên :</strong> không được rỗng</p>
-                  <p><strong>- Username:</strong> không có dấu</p>
-                  <p><strong>- Password:</strong> phải có ký tự đặc biệt</p>
-              </div> --}}
                 <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="POST"
                     enctype="multipart/form-data" action="{{ route('admin.article.edit.post') }}">
                     @csrf
@@ -45,6 +38,20 @@
                         <div class="col-12">
                             <input type="text" required="required" class="form-control col-md-7 col-xs-12" name="title"
                                 value="{{$article->title}}" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-12" for="province">Chọn danh mục<span class="required">*</span> </label>
+                        <div class="col-12">
+                            <select class="form-control" name="categoryId">
+                                @foreach ($categories as $category)
+                                    @if($category->id == $article->id_category)
+                                        <option selected value="{{$category->id}}">{{$category->name}}</option>
+                                    @else
+                                        <option value="{{$category->id}}">{{$category->name}}</option>
+                                    @endif
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                     <div class="form-group">
