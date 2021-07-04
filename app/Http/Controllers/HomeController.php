@@ -22,7 +22,7 @@ class HomeController extends Controller
         $text = 'Người con gái của thơi đại là người con gái như thế nào';
         $x = $this->infoService->toSlug($text);
         $string = $this->infoService->create_slug($x);
-        var_dump( $string); die();
+        // var_dump( $string); die();
         // test create link than thien ]
         
         $article = Article::all()->first();

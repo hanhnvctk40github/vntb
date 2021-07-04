@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InfoController;
+use App\Http\Controllers\FacebookController;
 use App\Http\Middleware\Auth;
 
 /*
@@ -39,3 +40,7 @@ Route::prefix('/admin')->middleware([Auth::class])->group(function () {
        Route::post('/article/upload', [ArticleController::class, 'upload'])->name('admin.article.upload');
        Route::get('/info', [InfoController::class, 'index'])->name('admin.info.index');
 });
+
+Route::get('/facebook/login', [FacebookController::class, 'getLogin'])->name('getLogin');
+Route::post('/postLogin', [FacebookController::class, 'postLogin'])->name('postLogin');
+
