@@ -12,9 +12,9 @@
 
 
 	<!-- Meta Keywords -->
-	<meta name="description" content="Việt Nam Thời Báo (VNTB). Diễn đàn Hội nhà báo độc lập Việt Nam, cung cấp thông tin chính trị xã hội, 
+	<meta name="description" content="Việt Nam Thời Báo (VNTB). Diễn đàn Hội nhà báo độc lập Việt Nam, cung cấp thông tin chính trị xã hội,
 pháp luật, kinh tế tài chính... Phản ảnh trung thực, cập nhật tin tức 24/7">
-	<meta name="keywords" content="Tin mới,Tin Mới nhật,Tin tức,Đối điện,Tin tức 24h,Cải cách tư pháp,Phạm Chí Dũng,IJAVN, 
+	<meta name="keywords" content="Tin mới,Tin Mới nhật,Tin tức,Đối điện,Tin tức 24h,Cải cách tư pháp,Phạm Chí Dũng,IJAVN,
 Diễn Đàn,Tin mới nóng,Dân Chủ,Chính Trị,Kinh tế,Xã hội,Nước Úc,Nguyễn Quang Duy,luật bán nước,Mốc son tháng Bảy!,Khánh Hoà,
 Thế Giới,về Hội,VNTB,Virus corona,thêm bình luận,mùa dịch corona,cập nhật tin tức mới nhất,Hồ Duy Hải,Bưu cục Cầu Voi,
 vietnamthoibao,thoibao,bao,thoi,mới,biểu nào dám,đại biểu nào,nào dám bỏ,Có đại biểu,đảng chính trị,chính phủ Úc,Anh Khoa,
@@ -1184,16 +1184,16 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
 				<div class="wrapper">
 
 					<ul class="menu menu" rel="Main Menu">
-						<li id="menu-item-28221" class="normal-drop  menu-single menu-item menu-item-type-custom menu-item-object-custom"><a href="">Home</a></li>
-						<li id="menu-item-1467" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/news/" style="border-bottom: 3px solid #214a82; ">Tin mới</a></li>
-						<li id="menu-item-1474" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/opposite/" style="border-bottom: 3px solid #214a82; ">Đối Diện</a></li>
-						<li id="menu-item-1491" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/forums/" style="border-bottom: 3px solid #214a82; ">Diễn Đàn</a></li>
-						<li id="menu-item-1469" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/democracy/" style="border-bottom: 3px solid #214a82; ">Dân Chủ</a></li>
-						<li id="menu-item-20508" class="normal-drop  menu-single menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/politics/" style="border-bottom: 3px solid #033567; ">Chính Trị</a></li>
-						<li id="menu-item-1470" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/economy/" style="border-bottom: 3px solid #214a82; ">Kinh tế</a></li>
-						<li id="menu-item-1471" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/society/" style="border-bottom: 3px solid #214a82; ">Xã hội</a></li>
-						<li id="menu-item-1454" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/world/" style="border-bottom: 3px solid #214a82; ">Thế Giới</a></li>
-						<li id="menu-item-1472" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/category/ijavn/" style="border-bottom: 3px solid #214a82; ">Về Hội</a></li>
+						<li id="menu-item-28221" class="normal-drop  menu-single menu-item menu-item-type-custom menu-item-object-custom"><a href="/">Home</a></li>
+						<li id="menu-item-1467" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/" style="border-bottom: 3px solid #214a82; ">Tin mới</a></li>
+						<li id="menu-item-1474" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/" style="border-bottom: 3px solid #214a82; ">Đối Diện</a></li>
+						<li id="menu-item-1491" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/" style="border-bottom: 3px solid #214a82; ">Diễn Đàn</a></li>
+						<li id="menu-item-1469" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/" style="border-bottom: 3px solid #214a82; ">Dân Chủ</a></li>
+						<li id="menu-item-20508" class="normal-drop  menu-single menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/" style="border-bottom: 3px solid #033567; ">Chính Trị</a></li>
+						<li id="menu-item-1470" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/" style="border-bottom: 3px solid #214a82; ">Kinh tế</a></li>
+						<li id="menu-item-1471" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/" style="border-bottom: 3px solid #214a82; ">Xã hội</a></li>
+						<li id="menu-item-1454" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/" style="border-bottom: 3px solid #214a82; ">Thế Giới</a></li>
+						<li id="menu-item-1472" class="normal-drop menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/" style="border-bottom: 3px solid #214a82; ">Về Hội</a></li>
 					</ul> <!-- END .wrapper -->
 					<a href="#" class="toggle-menu"><i class="fa fa-bars"></i> Toggle Menu</a>
 				</div>
@@ -1221,25 +1221,10 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
 								@if(isset($mostReadArticles) && $mostReadArticles)
 								@foreach($mostReadArticles as $article)
 								<li>
-									<h4><a href="{{route('detail',['id'=>$article->id])}}">VNTB – {{$article->title}}</a></h4><i class="fa fa-exclamation"></i>
+									<h4><a href= "{{asset("bai-viet/".$article->id."/". $article->seo_title)}}">VNTB – {{$article->title}}</a></h4><i class="fa fa-exclamation"></i>
 								</li>
 								@endforeach
 								@endif
-								<li>
-									<h4><a href="/">VNTB – Bắt bà Nguyễn Thúy Hạnh: Nhà nước muốn xóa bỏ quyền tự do ngôn luận</a></h4><i class="fa fa-exclamation"></i>
-								</li>
-								<li>
-									<h4><a href="/">VNTB – Quốc hội lập pháp: góc nhìn từ một hội luận của BBC</a></h4><i class="fa fa-exclamation"></i>
-								</li>
-								<li>
-									<h4><a href="/">VNTB – Ghi chép chuyện nọ xọ chuyện kia</a></h4><i class="fa fa-exclamation"></i>
-								</li>
-								<li>
-									<h4><a href="/">VNTB – “Triệu tập” là gì trong chuyện tố tụng?</a></h4><i class="fa fa-exclamation"></i>
-								</li>
-								<li>
-									<h4><a href="/">VNTB – Khi ‘quỹ dân sự’ đã bị nhà chức trách cố tình ‘chính trị hóa’</a></h4><i class="fa fa-exclamation"></i>
-								</li>
 							</ul>
 						</div>
 						<!-- END .breaking-news -->
@@ -1276,19 +1261,27 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
 					</div> -->
 					<div class="widget-3 last widget">
 						<div class="w-title">
-							<h3>Đọc nhiều nhất</h3>
+							<h3>Bài viết mới nhất</h3>
 						</div><!-- cached -->
 						<!-- WordPress Popular Posts -->
 
 						<ul class="wpp-list wpp-list-with-thumbnails">
-							@if(isset($mostReadArticles) && $mostReadArticles)
-							@foreach($mostReadArticles as $article)
-							<li>
-								<a href="{{route('detail',['id'=>$article->id])}}"><img src="{{$article->background_image}}" /></a>
-								<a href="{{route('detail',['id'=>$article->id])}}" class="wpp-post-title" target="_self">VNTB – {{$article->title}}</a>
-							</li>
-							@endforeach
-							@endif
+                            <hr>
+                                <div class="article-list">
+                                    @if(isset($mostReadArticles) && $mostReadArticles)
+                                    @foreach($mostReadArticles as $article)
+                                    <div class="item">
+                                        <a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>
+                                            <img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded"/></a>
+                                        <div class="item-content">
+                                            <h3><a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>VNTB – {{$article->title}}</a></h3>
+                                            <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($article->created_at))}}</span>
+
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                    @endif
+                                </div>
 						</ul>
 
 					</div>

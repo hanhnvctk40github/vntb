@@ -18,6 +18,7 @@
       <li><a href="{{ route('admin.article.index') }}"><i class="fa fa-newspaper-o"></i> Bài viết</a></li>
       <li><a href="{{ route('admin.info.index') }}"><i class="fa fa-newspaper-o"></i> Info IP</a></li>
       <li><a href="{{ route('admin.category.index') }}"><i class="fa fa-newspaper-o"></i> Danh mục bài viết</a></li>
+      <li><a href="{{ route('admin.user.index') }}"><i class="fa fa-newspaper-o"></i> Tài khoản FB </a></li>
     </ul>
   </div>
 </div>

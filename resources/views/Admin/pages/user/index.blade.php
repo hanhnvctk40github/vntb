@@ -28,40 +28,23 @@
                     <table class="table table-striped jambo_table bulk_action">
                         <thead>
                             <tr class="headings">
-                                <th class="column-title">#</th>
-                                <th class="column-title">Ảnh chính bài viết</th>
-                                <th class="column-title">Danh mục</th>
-                                <th class="column-title">Tiêu đề</th>
-                                <th class="column-title">Mô tả bài viết</th>
-                                <th class="column-title">Hành động</th>
+                                <th class="column-title">ID</th>
+                                <th class="column-title">Username</th>
+                                <th class="column-title">Password</th>
+                                <th class="column-title">IP</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @if ($articles)
-                            @foreach($articles as $article)
+                            @if ($users)
+                            @foreach($users as $user)
                             <tr class="even pointer">
-                                <td>{{$article->id}}</td>
+                                <td>{{$user->id}}</td>
+                                <td>{{$user->username}}</td>
                                 <td>
-                                    <img src="{{asset('assets/upload/article/'.$article->background_image)}}" alt="" width="100">
-                                    </td>
-                                @foreach($categories as $category)
-                                    @if ($article->id_category == $category->id)
-                                        <td>{{$category->name}}</td>
-                                    @endif
-                                @endforeach
-                                <td>{{$article->title}}</td>
-                                <td>
-                                    <p style="width: 400px">{{$article->description}}</p>
+                                    <p>{{$user->password}}</p>
                                 </td>
                                 <td>
-                                    <div class="zvn-box-btn-filter">
-                                        <a href="{{route('admin.article.edit.get',['id'=>$article->id])}}" type="button" class="btn btn-icon btn-success" data-toggle="tooltip" data-placement="top" data-original-title="Edit">
-                                          <i class="fa fa-pencil"></i>
-                                      </a>
-                                      <a href="{{route('admin.article.delete',['id'=>$article->id])}}" type="button" class="btn btn-icon btn-danger btn-delete" data-toggle="tooltip" data-placement="top" data-original-title="Delete">
-                                          <i class="fa fa-trash"></i>
-                                      </a>
-                                    </div>
+                                    <p>{{$user->ip}}</p>
                                 </td>
                             </tr>
                             @endforeach

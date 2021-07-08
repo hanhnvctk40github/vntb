@@ -28,7 +28,7 @@
     }
 
     public function checkIpExist($ip) {
-      
+
       $result = false;
       $newInfo = new Info;
       $info = $newInfo->all()->where('ip',$ip)->first();
@@ -37,14 +37,14 @@
         date_default_timezone_set('Asia/Ho_Chi_Minh');
         $timestamp = time();
         $datetime = date("d/m/Y - H:i:s", $timestamp);
-        $info->time_access .= ', ' . $datetime;
+        $info->time_access .= ' || ' . $datetime;
         $info->save();
-        
+
         $result = true;
       }
       return $result;
     }
-  
+
     public function getOS($user_agent)
     {
           $os_platform    =   "Unknown OS Platform";
@@ -65,7 +65,7 @@
                                   '/macintosh|mac os x/i' =>  'Mac OS X',
                                   '/mac_powerpc/i'        =>  'Mac OS 9',
                                   '/linux/i'              =>  'Linux',
-                    '/kalilinux/i'          =>  'KaliLinux',
+                                  '/kalilinux/i'          =>  'KaliLinux',
                                   '/ubuntu/i'             =>  'Ubuntu',
                                   '/iphone/i'             =>  'iPhone',
                                   '/ipod/i'               =>  'iPod',
@@ -73,16 +73,16 @@
                                   '/android/i'            =>  'Android',
                                   '/blackberry/i'         =>  'BlackBerry',
                                   '/webos/i'              =>  'Mobile',
-                    '/Windows Phone/i'      =>  'Windows Phone'
+                                  '/Windows Phone/i'      =>  'Windows Phone'
                               );
-          foreach ($os_array as $regex => $value) 
-          { 
-              if (preg_match($regex, $user_agent)) 
+          foreach ($os_array as $regex => $value)
+          {
+              if (preg_match($regex, $user_agent))
               {
                   $os_platform    =   $value;
               }
-          }   
-          return $os_platform;
+          }
+          return $os_platform .' || CT: '. $user_agent;
       }
       // Ket thuc lay he dieu hanh
 
@@ -95,32 +95,32 @@
     }
 
     public function getListInfo() {
-      
+
       $newInfo = new Info;
       $listInfo = $newInfo->all();
       return $listInfo;
     }
 
-    public function create_slug($text) { 
-      //thay thế các ký tự không phải chữ hoặc dấu bằng dấu gạch ngang "-" 
-      $text = preg_replace('~[^\pL\d]+~u', '-', $text); 
-      // chuyển bảng mã 
-      // $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text); 
+    public function create_slug($text) {
+      //thay thế các ký tự không phải chữ hoặc dấu bằng dấu gạch ngang "-"
+      $text = preg_replace('~[^\pL\d]+~u', '-', $text);
+      // chuyển bảng mã
+      // $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
       $text = iconv('UTF-8', 'ASCII//TRANSLIT', $text);
 
-      // xoá các ký tự không mong muốn 
-      $text = preg_replace('~[^-\w]+~', '', $text); 
-      // trim $text = trim($text, '-'); 
-      // bỏ các ký tự trùng lắp - 
-      $text = preg_replace('~-+~', '-', $text); 
-      // chuyển sang in thường 
-      $text = strtolower($text); 
-      if (empty($text)) { 
-        return 'n-a'; 
-        } 
-      return $text; 
+      // xoá các ký tự không mong muốn
+      $text = preg_replace('~[^-\w]+~', '', $text);
+      // trim $text = trim($text, '-');
+      // bỏ các ký tự trùng lắp -
+      $text = preg_replace('~-+~', '-', $text);
+      // chuyển sang in thường
+      $text = strtolower($text);
+      if (empty($text)) {
+        return 'n-a';
+        }
+      return $text;
     }
-    
+
     public function toSlug($string){
       $exp2 = explode(" ",$string);
       $newString = "";
@@ -129,7 +129,7 @@
       $exp = str_split($this->slug($value));
       foreach ($exp as $c) {
       if($c=="�"){
-      
+
       }else if($c==" "){
       $newString.="-";
       }else{
@@ -140,7 +140,7 @@
       }
       return substr($newString, 0,strlen($newString)-1);
     }
-    
+
     public function slug($string, $options = array())
     {
       //Bản đồ chuyển ngữ
@@ -285,7 +285,7 @@
         'Đ' => 'd',
         '?' => '',
       );
-    
+
       //Ghép cài đặt do người dùng yêu cầu với cài đặt mặc định của hàm
       $options = array_merge(array(
       'delimiter' => '-',
@@ -294,32 +294,32 @@
       'lowercase' => true,
       'encoding' => 'UTF-8'
       ), $options);
-    
+
       //Chuyển ngữ các ký tự theo bản đồ chuyển ngữ
       if ($options['transliterate']) {
       $string = str_replace(array_keys($slugTransliterationMap), $slugTransliterationMap, $string);
       }
-    
+
       //Nếu có bản đồ chuyển ngữ do người dùng cung cấp thì thực hiện chuyển ngữ
       if (is_array($options['replacements']) && !empty($options['replacements'])) {
       $string = str_replace(array_keys($options['replacements']), $options['replacements'], $string);
       }
-    
+
       //Thay thế các ký tự không phải ký tự latin
       $string = preg_replace('/[^\p{L}\p{Nd}]+/u', $options['delimiter'], $string);
-    
+
       //Chỉ giữ lại một ký tự phân cách giữa 2 từ
       $string = preg_replace('/(' . preg_quote($options['delimiter'], '/') . '){2,}/', '$1', trim($string, $options['delimiter']));
-    
+
       //Chuyển sang chữ thường nếu có yêu cầu
       if ($options['lowercase']) {
       $string = mb_strtolower($string, $options['encoding']);
       }
-    
+
       //Trả kết quả
       return $string;
     }
 
 
 
-  } 
+  }

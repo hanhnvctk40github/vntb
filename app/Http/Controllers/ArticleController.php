@@ -16,20 +16,23 @@ class ArticleController extends Controller
     }
 
     public function detail($id) {
-        $ip             = $_SERVER['REMOTE_ADDR']; 
+        $ip             = $_SERVER['REMOTE_ADDR'];
         $user_agent     = $_SERVER['HTTP_USER_AGENT'];
         $resultSaveInfo = $this->infoService->saveInfo($ip, $user_agent);
         $article = Article::findOrFail($id);
         $title = $article->title;
-        return view('detail',['article'=>$article,'title'=>$title]);
+        $mostReadArticles = Article::all()->sortByDesc('created_at')->take(20);
+        return view('detail',['article'=>$article,'title'=>$title, 'mostReadArticles' => $mostReadArticles]);
     }
 
     public function index(){
         $article = new Article;
-        $articles = $article::all();
-        return view('Admin.pages.article.index',['articles'=>$articles]);
+        $articles = $article::all()->sortBy('id_category');
+        $category = new Category;
+        $categories = $category::all();
+        return view('Admin.pages.article.index',['articles'=>$articles,'categories'=>$categories]);
     }
-    
+
     public function addGet(){
         $category = new Category;
         $categories = $category::all();
@@ -42,6 +45,7 @@ class ArticleController extends Controller
         $article->description = $request->description;
         $article->content = $request->content;
         $article->id_category = $request->categoryId;
+        $article->status_button_register = $request->btnRegister;
         $toSlug = $this->infoService->toSlug($request->title);
         $create_slug = $this->infoService->create_slug($toSlug);
         $article->seo_title = $create_slug;
@@ -49,7 +53,7 @@ class ArticleController extends Controller
             $fileName = time().$request->file('background_image')->getClientOriginalName();
             $request->file('background_image')->move(public_path('/assets/upload/article'), $fileName);
             $article->background_image = $fileName;
-        } 
+        }
         $article->save();
         return redirect()->route("admin.article.index");
     }
@@ -69,6 +73,7 @@ class ArticleController extends Controller
         $article->description = $request->description;
         $article->content = $request->content;
         $article->id_category = $request->categoryId;
+        $article->status_button_register = $request->btnRegister;
         if ($request->hasfile('background_image')) {
             $fileName = time().$request->file('background_image')->getClientOriginalName();
             $request->file('background_image')->move(public_path('/assets/upload/article'), $fileName);

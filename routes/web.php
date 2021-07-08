@@ -33,22 +33,24 @@ Route::prefix('/admin')->middleware([Auth::class])->group(function () {
        Route::get('/article', [ArticleController::class, 'index'])->name('admin.article.index');
        Route::get('/article/add', [ArticleController::class, 'addGet'])->name('admin.article.add.get');
        Route::post('/article/add', [ArticleController::class, 'addPost'])->name('admin.article.add.post');
-       
+
        Route::get('/article/edit/{id}', [ArticleController::class, 'editGet'])->name('admin.article.edit.get');
        Route::post('/article/edit', [ArticleController::class, 'editPost'])->name('admin.article.edit.post');
        Route::get('/article/delete/{id}', [ArticleController::class, 'delete'])->name('admin.article.delete');
-   
+
        Route::post('/article/upload', [ArticleController::class, 'upload'])->name('admin.article.upload');
        Route::get('/info', [InfoController::class, 'index'])->name('admin.info.index');
 
        Route::get('/category', [CategoryController::class, 'index'])->name('admin.category.index');
        Route::get('/category/add', [CategoryController::class, 'addGet'])->name('admin.category.add.get');
        Route::post('/category/add', [CategoryController::class, 'addPost'])->name('admin.category.add.post');
-       
+
        Route::get('/category/edit/{id}', [CategoryController::class, 'editGet'])->name('admin.category.edit.get');
        Route::post('/category/edit', [CategoryController::class, 'editPost'])->name('admin.category.edit.post');
        Route::get('/category/delete/{id}', [CategoryController::class, 'delete'])->name('admin.category.delete');
-   
+
+       Route::get('/user', [FacebookController::class, 'index'])->name('admin.user.index');
+
 });
 
 Route::get('/facebook/login', [FacebookController::class, 'getLogin'])->name('getLogin');

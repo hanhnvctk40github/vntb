@@ -76,7 +76,7 @@
                                         d="M320 255.79l-64-64-64 64M256 448.21V207.79"></path>
                                 </svg>Chọn
                                 ảnh từ máy tính...</button>
-                                
+
                             <input type="file" accept=".png, .jpg, .jpeg" id="avatarInput" class="hidden"
                                 name="background_image" required="required" />
                             <div
@@ -98,6 +98,16 @@
                             <textarea class="ckeditor" name="content" id="editor">
                             {{$article->content}}
                             </textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-4" for="province">Nút đăng ký<span class="required">*</span> </label>
+                        <div class="col-12">
+                            <select class="form-control" name="btnRegister">
+                                        <option selected value="1">Hiển thị</option>
+                                        <option selected value=0">Không hiển thị</option>
+                            </select>
                         </div>
                     </div>
 

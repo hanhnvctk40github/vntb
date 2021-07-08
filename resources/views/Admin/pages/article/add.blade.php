@@ -58,6 +58,17 @@
                             </select>
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-12" for="province">Nút đăng ký<span class="required">*</span> </label>
+                        <div class="col-12">
+                            <select class="form-control" name="btnRegister">
+                                        <option selected value="1">Hiển thị</option>
+                                        <option value="0">Không hiển thị</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <label class="control-label col-12">Mô tả bài viết <span
                                 class="required">*</span> </label>

