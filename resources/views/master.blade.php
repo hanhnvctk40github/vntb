@@ -431,7 +431,7 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
 	<!-- Facebook Open Graph -->
 	<meta property="og:locale" content="vi_VN">
 	<meta property="og:site_name" content="Việt Nam Thời Báo">
-	<meta property="og:title" content="Homepage">
+	<meta property="og:title" content="Việt Nam Thời Báo">
 	<meta property="og:url" content="/">
 	<meta property="og:type" content="website">
 	<meta property="og:description" content="Tin tức trung thực, phản biện không ngừng">
