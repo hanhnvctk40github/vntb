@@ -24,14 +24,15 @@ CKEDITOR.on( 'dialogDefinition', function( ev ) {
       // Take the dialog name and its definition from the event data.
       var dialogName = ev.data.name;
       var dialogDefinition = ev.data.definition;
-
-
-      var uploadTab = dialogDefinition.getContents( 'Upload' );
-      var uploadButton = uploadTab.get('uploadButton');
-      uploadButton['filebrowser']['onSelect'] = function( filePath ) {
-        var fileName = filePath.split('/').pop();
-        var inputValue = $("input.imageList").val() === '' ? '' : $("input.imageList").val()+',';
-        $("input.imageList").val(inputValue+fileName);
+      if (dialogName == 'image') {
+        var uploadTab = dialogDefinition.getContents( 'Upload' );
+        var uploadButton = uploadTab.get('uploadButton');
+        uploadButton['filebrowser']['onSelect'] = function( filePath ) {
+          var fileName = filePath.split('/').pop();
+          var inputValue = $("input.imageList").val() === '' ? '' : $("input.imageList").val()+',';
+          $("input.imageList").val(inputValue+fileName);
+        }
       }
+      
 });
 </script>
