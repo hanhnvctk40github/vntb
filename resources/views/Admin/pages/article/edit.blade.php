@@ -78,7 +78,7 @@
                                 ảnh từ máy tính...</button>
 
                             <input type="file" accept=".png, .jpg, .jpeg" id="avatarInput" class="hidden"
-                                name="background_image" required="required" />
+                                name="background_image" />
                             <div
                                 class="preview-images-zone ui-sortable preview-images-zone__avatar preview-article-thumbnail">
                                 <div class="preview-image preview-avatar-show ui-sortable-handle">
@@ -105,8 +105,8 @@
                         <label class="control-label col-4" for="province">Nút đăng ký<span class="required">*</span> </label>
                         <div class="col-12">
                             <select class="form-control" name="btnRegister">
-                                        <option selected value="1">Hiển thị</option>
-                                        <option selected value=0">Không hiển thị</option>
+                                <option value="1" {{($article->status_button_register==1) ? 'selected' : '' }}>Hiển thị</option>
+                                <option value="0" {{($article->status_button_register==0) ? 'selected' : '' }}>Không hiển thị</option>
                             </select>
                         </div>
                     </div>
