@@ -18,8 +18,8 @@
 				@endif
 			</div>
 			<ul class="slider-navigation">
-				@if(isset($articlesNew) && $articlesNew)
-				@foreach($articlesNew as $article)
+				@if(isset($articlesBreakings) && $articlesBreakings)
+				@foreach($articlesBreakings as $article)
 				<li class="">
 					<a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}' data-target="1">
 						<strong>VNTB – {{$article->title}}</strong>

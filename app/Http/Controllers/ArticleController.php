@@ -87,7 +87,9 @@ class ArticleController extends Controller
         $articleModel = new Article;
         $article = $articleModel::findOrFail($id);
         $article->delete();
-        unlink("/assets/upload/article/".$article->background_image);
+        if (file_exists("/assets/upload/article/".$article->background_image)) {
+            unlink("/assets/upload/article/".$article->background_image);
+        }
         return redirect()->route("admin.article.index");
     }
 

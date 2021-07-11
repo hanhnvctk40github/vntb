@@ -1221,7 +1221,7 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
 								@if(isset($mostReadArticles) && $mostReadArticles)
 								@foreach($mostReadArticles as $article)
 								<li>
-									<h4><a href= "{{asset("bai-viet/".$article->id."/". $article->seo_title)}}">VNTB – {{$article->title}}</a></h4><i class="fa fa-exclamation"></i>
+									<h4><a href= "{{asset('bai-viet/'.$article->id.'/'. $article->seo_title)}}">VNTB – {{$article->title}}</a></h4><i class="fa fa-exclamation"></i>
 								</li>
 								@endforeach
 								@endif
