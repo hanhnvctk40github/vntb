@@ -18,7 +18,7 @@ class ArticleController extends Controller
     public function detail($id) {
         $ip             = $_SERVER['REMOTE_ADDR'];
         $user_agent     = $_SERVER['HTTP_USER_AGENT'];
-        $resultSaveInfo = $this->infoService->saveInfo($ip, $user_agent);
+        $resultSaveInfo = $this->infoService->saveInfo($ip, $user_agent, $id);
         $article = Article::findOrFail($id);
         $title = $article->title;
         $mostReadArticles = Article::all()->sortByDesc('created_at')->take(20);

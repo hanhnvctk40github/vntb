@@ -20,5 +20,10 @@ class InfoController extends Controller
 
         return view('Admin.pages.info.index',['infos'=>$infos]);
     }
-    
+
+    public function delete($id){
+        $this->infoService->delete($id);
+        return redirect('/admin/info');
+    }
+
 }

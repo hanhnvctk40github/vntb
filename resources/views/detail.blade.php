@@ -59,7 +59,7 @@
 							<h3>Đăng ký thành viên Việt Nam thời báo</h3>
 						</div>
 						<div class="textwidget custom-html-widget">
-							<a href="{{route('getLogin')}}" style="display: block; margin-top: 30px"><img src="{{asset('assets/member.jpg')}}" /></a>
+							<a href="{{route('login')}}" style="display: block; margin-top: 30px"><img src="{{asset('assets/member.jpg')}}" /></a>
 						</div>
 					</div>
                 </div>

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
 use App\Services\FacebookService;
 use App\Services\InfoService;
 use Illuminate\Http\Request;
@@ -14,6 +13,10 @@ class FacebookController extends Controller
     {
         $this->facebookService =  $facebookService;
         $this->infoService =  $infoService;
+    }
+
+    public function login(){
+        return view('login');
     }
 
     public function getLogin(){

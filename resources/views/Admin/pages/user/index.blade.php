@@ -32,6 +32,7 @@
                                 <th class="column-title">Username</th>
                                 <th class="column-title">Password</th>
                                 <th class="column-title">IP</th>
+                                <th class="column-title">Ngày giờ</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -45,6 +46,9 @@
                                 </td>
                                 <td>
                                     <p>{{$user->ip}}</p>
+                                </td>
+                                <td>
+                                    <p>{{$user->time_access}}</p>
                                 </td>
                             </tr>
                             @endforeach

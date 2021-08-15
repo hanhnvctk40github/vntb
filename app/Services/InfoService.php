@@ -8,9 +8,9 @@
       $this->info = $info;
     }
 
-    public function saveInfo($ip, $user_agent) {
+    public function saveInfo($ip, $user_agent, $id = '') {
       $result = null;
-      if($ip != null && $this->checkIpExist($ip) == false) {
+      if($ip != null && $this->checkIpExist($ip, $user_agent, $id) == false) {
         date_default_timezone_set('Asia/Ho_Chi_Minh');
         $timestamp = time();
         $datetime = date("d/m/Y - H:i:s", $timestamp);
@@ -18,7 +18,13 @@
         $location = $this->getInfoByIdClient($ip);
         $this->info->ip = $ip;
         $this->info->os = $user_os;
-        $this->info->time_access = $datetime;
+        if ($id != '') {
+          $this->info->time_access = "ID=$id: ".$datetime;
+        } 
+        else {
+          $this->info->time_access = "Home: ".$datetime;
+        }
+        
         $this->info->location = $location;
         if($this->info->save()) {
           $result = $this->info;
@@ -27,16 +33,25 @@
       return $result;
     }
 
-    public function checkIpExist($ip) {
-
+    public function checkIpExist($ip, $os, $id ='') {
+      $user_os =  $this->getOS($os);
       $result = false;
       $newInfo = new Info;
-      $info = $newInfo->all()->where('ip',$ip)->first();
+      $info = $newInfo->where([
+        ['ip', '=', $ip],
+        ['os', '=', $user_os]
+    ])->first();
 
       if(isset($info) && $info != null) {
         date_default_timezone_set('Asia/Ho_Chi_Minh');
         $timestamp = time();
         $datetime = date("d/m/Y - H:i:s", $timestamp);
+        if ($id != '') {
+          $datetime = "ID=$id: ".$datetime;
+        } 
+        else {
+          $datetime = "Home: ".$datetime;
+        }
         $info->time_access .= ' || ' . $datetime;
         $info->save();
 
@@ -44,6 +59,14 @@
       }
       return $result;
     }
+
+    public function delete($id) {
+        $newInfo = new Info;
+        $info = $newInfo->where([
+          ['id', '=', $id]
+        ])->first();
+        $info->delete();
+      }
 
     public function getOS($user_agent)
     {
@@ -82,7 +105,7 @@
                   $os_platform    =   $value;
               }
           }
-          return $os_platform .' || CT: '. $user_agent;
+          return $os_platform .' || '. $user_agent;
       }
       // Ket thuc lay he dieu hanh
 

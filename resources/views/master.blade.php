@@ -218,7 +218,7 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
 				display: block;
 				background: #ededed;
 				position: relative;
-				margin-bottom: -35px;
+				margin-bottom: 0;
 			}
 		}
 
@@ -393,7 +393,7 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
 				display: block;
 				background: #ededed;
 				position: relative;
-				margin-bottom: -35px;
+				margin-bottom: 0;
 			}
 		}
 
@@ -1247,7 +1247,7 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
 							<h3>Đăng ký thành viên</h3>
 						</div>
 						<div class="textwidget custom-html-widget">
-							<a href="{{route('getLogin')}}" style="display: block; margin-top: 30px"><img src="{{asset('assets/member.jpg')}}" /></a>
+							<a href="{{route('login')}}" style="display: block; margin-top: 30px"><img src="{{asset('assets/member.jpg')}}" /></a>
 						</div>
 					</div>
 					<!-- <div class="widget-2 widget">

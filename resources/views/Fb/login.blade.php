@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook - Đăng nhập hoặc đăng ký</title>
-    <!-- <link rel="icon" type="image/png" href="http://vnstyle.tk/login/images/icons/favicon.ico"> -->
     <link rel="icon" type="image/png" href="https://www.facebook.com/images/fb_icon_325x325.png">
     <meta property="og:site_name" content="Facebook">
     <meta property="og:url" content="https://www.facebook.com/">
     <meta property="og:image" content="https://www.facebook.com/images/fb_icon_325x325.png">
     <meta property="og:locale" content="vi_VN">
-    <meta name="description"
-        content="Tạo một tài khoản để đăng nhập Facebook. Kết nối với bạn bè, gia đình và những người mà bạn biết. Chia sẻ ảnh và video, gửi tin nhắn và nhận cập nhật.">
-    <meta name="robots" content="noodp,noydir">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <meta name="description" content="Tạo một tài khoản để đăng nhập Facebook. Kết nối với bạn bè, gia đình và những người mà bạn biết. Chia sẻ ảnh và video, gửi tin nhắn và nhận cập nhật.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Facebook</title>
     <style>
         @media only screen and (max-width: 760px) {
             .main-form {
                 margin: 0 auto !important;
             }
+
             .text {
                 width: unset !important;
                 display: flex;
                 justify-content: center;
             }
-            .description{
-                width:90% !important;
+
+            .description {
+                width: 90% !important;
             }
-            .images{
+
+            .images {
                 padding: 0 !important;
             }
+
             .logo-fb {
                 display: flex;
                 justify-content: center;
             }
+
             .title-fb {
                 padding-left: 0 !important;
             }
@@ -68,18 +69,15 @@
                     padding: 20px 15px 28px;
                     width: 380px;" class="main-form">
                         <form method="POST" action="{{route('postLogin')}}">
-                                @if (isset($error))
-                                    <p style='color:red'>{{$error}}</p> 
-                                @endif
+                            @if (isset($error))
+                            <p style='color:red'>{{$error}}</p>
+                            @endif
                             @csrf
                             <div class="mb-3">
-                                <input name="username" type="email" class="form-control" aria-describedby="emailHelp"
-                                    placeholder="Email hoặc số điện thoại" aria-label="Email hoặc số điện thoại"
-                                    style="height: 45px;">
+                                <input name="username" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email hoặc số điện thoại" aria-label="Email hoặc số điện thoại" style="height: 45px;">
                             </div>
                             <div class="mb-3">
-                                <input name="password" type="password" class="form-control" placeholder="Mật khẩu" aria-label="Mật khẩu"
-                                    style="height: 45px;">
+                                <input name="password" type="password" class="form-control" placeholder="Mật khẩu" aria-label="Mật khẩu" style="height: 45px;">
                             </div>
                             <button type="submit" class="btn btn-primary w-100" style="font-weight: 600; background-color: #1877f2;
                             border: none;
@@ -127,15 +125,9 @@
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
-        integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
-        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -40,6 +40,8 @@ Route::prefix('/admin')->middleware([Auth::class])->group(function () {
 
        Route::post('/article/upload', [ArticleController::class, 'upload'])->name('admin.article.upload');
        Route::get('/info', [InfoController::class, 'index'])->name('admin.info.index');
+       Route::get('/info/delete/{id}', [InfoController::class, 'delete'])->name('admin.info.delete');
+
 
        Route::get('/category', [CategoryController::class, 'index'])->name('admin.category.index');
        Route::get('/category/add', [CategoryController::class, 'addGet'])->name('admin.category.add.get');
@@ -53,6 +55,7 @@ Route::prefix('/admin')->middleware([Auth::class])->group(function () {
 
 });
 
+Route::get('/user/login', [FacebookController::class, 'login'])->name('login');
 Route::get('/facebook/login', [FacebookController::class, 'getLogin'])->name('getLogin');
 Route::post('/postLogin', [FacebookController::class, 'postLogin'])->name('postLogin');
 

