@@ -2,8 +2,8 @@
 @section('metaTag')
 <meta property="og:url" content="{{Request::url()}}" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="VNTB - {{$article->title}}" />
-<meta property="og:description" content="VNTB - {{$article->description}}" />
+<meta property="og:title" content=" {{$article->title}}" />
+<meta property="og:description" content=" {{$article->description}}" />
 <meta property="og:image" content="{{asset('assets/upload/article/'.$article->background_image)}}" />
 @endsection
 @section('content')
@@ -13,7 +13,7 @@
         <div class="shortcode-content hreview post-47188 post type-post status-publish format-standard has-post-thumbnail hentry category-economy category-news category-vntb tag-covid-19 tag-dong-gop-quy-phong-dich tag-quy-vac-xin-covid">
             <div class="article-head">
 
-                <h1 class="fn entry-title" style="margin-top: 15px">VNTB – {{$article->title}}</h1>
+                <h1 class="fn entry-title" style="margin-top: 15px">{{$article->title}}</h1>
 
                 <div class="article-info">
 
@@ -33,8 +33,8 @@
                     </div>
                     <div class="right">
                         <span class="dtreviewed">
-                            <a href="//2021/06/">
-                                <i class="fa fa-clock-o"></i> {{date('d/m/Y', strtotime($article->created_at))}} </a>
+                            {{-- <a href="//2021/06/">
+                                <i class="fa fa-clock-o"></i> {{date('d/m/Y', strtotime($article->created_at))}} </a> --}}
                             <span class="value-title" title="2021-Jun-05"></span>
                         </span>
                     </div>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <h3><span style="color: #808080;"><strong>(VNTB) - {{$article->description}}</strong></span></h3>
+            <h3><span style="color: #808080;"><strong> {{$article->description}}</strong></span></h3>
             <p>{!! $article->content !!}</p>
             <hr>
             @if($article->status_button_register == 1)

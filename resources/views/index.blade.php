@@ -8,9 +8,9 @@
 				@if(isset($article) && $article)
 				<a href='{{asset("bai-viet/".$article->id."/". $article->title)}}' class="active">
 					<span class="slider-overlay">
-						<strong>VNTB – {{$article->title}}</strong>
+						<strong> {{$article->title}}</strong>
 						<span>
-							<p>(VNTB) –&nbsp;{{$article->description}}</p>
+							<p>&nbsp;{{$article->description}}</p>
 						</span>
 					</span>
 					<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="setborder" />
@@ -22,9 +22,9 @@
 				@foreach($articlesBreakings as $article)
 				<li class="">
 					<a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}' data-target="1">
-						<strong>VNTB – {{$article->title}}</strong>
+						<strong> {{$article->title}}</strong>
 						<span>
-							<p>(VNTB) –&nbsp;{{$article->description}}</p>
+							<p>&nbsp;{{$article->description}}</p>
 						</span>
 					</a>
 				</li>
@@ -58,7 +58,7 @@
                 </div>
                 <h4><a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>
                         {{$article->title}}</a></h4>
-                <p>(VNTB) –&nbsp;{{$article->description}}</p>
+                <p>&nbsp;{{$article->description}}</p>
             </div>
 	</div>
 	@endforeach
@@ -84,13 +84,13 @@
 						<div class="article-slide">
 							<h3><a href='{{asset("bai-viet/".$articleDoidien->id."/". $articleDoidien->seo_title)}}'>{{$articleDoidien->title}}</a></h3>
 							<a href='{{asset("bai-viet/".$articleDoidien->id."/". $articleDoidien->seo_title)}}' class="info-line">
-								<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($articleDoidien->created_at))}}</span>
+								{{-- <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($articleDoidien->created_at))}}</span> --}}
 								<span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;Bình luận</span>
 							</a>
 						</div>
 					</div>
 					<div class="item-content">
-						<p>(VNTB) –&nbsp;{{$articleDanchu->description}}</p>
+						<p>&nbsp;{{$articleDanchu->description}}</p>
 					</div>
 				</div>
 				@endif
@@ -102,7 +102,7 @@
 					</a>
 					<div class="item-content">
 						<h3><a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>{{$article->title}}</a></h3>
-						<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($article->created_at))}}</span>
+						{{-- <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($article->created_at))}}</span> --}}
 						<a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;Bình luận</span></a>
 
 					</div>
@@ -134,13 +134,13 @@
 						<div class="article-slide">
 							<h3><a href='{{asset("bai-viet/".$articleDanchu->id."/". $articleDanchu->seo_title)}}'>{{$articleDanchu->title}}</a></h3>
 							<a href='{{asset("bai-viet/".$articleDanchu->id."/". $articleDanchu->seo_title)}}' class="info-line">
-								<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($articleDanchu->created_at))}}</span>
+								{{-- <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($articleDanchu->created_at))}}</span> --}}
 								<span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;Bình luận</span>
 							</a>
 						</div>
 					</div>
 					<div class="item-content">
-						<p>(VNTB) –&nbsp;{{$articleDanchu->description}}</p>
+						<p>&nbsp;{{$articleDanchu->description}}</p>
 					</div>
 				</div>
 				@endif
@@ -152,7 +152,7 @@
 					</a>
 					<div class="item-content">
 						<h3><a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>{{$article->title}}</a></h3>
-						<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($article->created_at))}}</span>
+						{{-- <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($article->created_at))}}</span> --}}
 						<a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;Bình luận</span></a>
 
 					</div>
@@ -186,13 +186,13 @@
 						<div class="article-slide">
 							<h3><a href='{{asset("bai-viet/".$articleDiendan->id."/". $articleDiendan->seo_title)}}'>{{$articleDiendan->title}}</a></h3>
 							<a href='{{asset("bai-viet/".$articleDiendan->id."/". $articleDiendan->seo_title)}}' class="info-line">
-								<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($articleDiendan->created_at))}}</span>
+								{{-- <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($articleDiendan->created_at))}}</span> --}}
 								<span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;Bình luận</span>
 							</a>
 						</div>
 					</div>
 					<div class="item-content">
-						<p>(VNTB) –&nbsp;{{$articleDiendan->description}}</p>
+						<p>&nbsp;{{$articleDiendan->description}}</p>
 					</div>
 				</div>
 				@endif
@@ -204,7 +204,7 @@
 					</a>
 					<div class="item-content">
 						<h3><a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>{{$article->title}}</a></h3>
-						<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($article->created_at))}}</span>
+						{{-- <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($article->created_at))}}</span> --}}
 						<a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;Bình luận</span></a>
 
 					</div>
@@ -236,13 +236,13 @@
 						<div class="article-slide">
 							<h3><a href='{{asset("bai-viet/".$articleChinhtri->id."/". $articleChinhtri->seo_title)}}'>{{$articleChinhtri->title}}</a></h3>
 							<a href='{{asset("bai-viet/".$articleChinhtri->id."/". $articleChinhtri->seo_title)}}' class="info-line">
-								<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($articleChinhtri->created_at))}}</span>
+								{{-- <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($articleChinhtri->created_at))}}</span> --}}
 								<span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;Bình luận</span>
 							</a>
 						</div>
 					</div>
 					<div class="item-content">
-						<p>(VNTB) –&nbsp;{{$articleChinhtri->description}}</p>
+						<p>&nbsp;{{$articleChinhtri->description}}</p>
 					</div>
 				</div>
 				@endif
@@ -254,7 +254,7 @@
 					</a>
 					<div class="item-content">
 						<h3><a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>{{$article->title}}</a></h3>
-						<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($article->created_at))}}</span>
+						{{-- <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($article->created_at))}}</span> --}}
 						<a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;Bình luận</span></a>
 
 					</div>
@@ -284,7 +284,7 @@
                     <a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}' class="item-photo">
                         <img src="{{asset('assets/upload/article/'.$article->background_image)}}"/></a>
                     <h3>
-                        <a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>VNTB – {{$article->title}}</a>
+                        <a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'> {{$article->title}}</a>
                     </h3>
                 </div>
                 <div class="item-content">
@@ -337,7 +337,7 @@
 				</div>
 				<h4><a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>
 						{{$article->title}}</a></h4>
-				<p>(VNTB) –&nbsp;{{$article->description}}</p>
+				<p>&nbsp;{{$article->description}}</p>
 			</div>
 		</div>
 		@endforeach
@@ -360,15 +360,15 @@
 							<a href='{{asset("bai-viet/".$articleVntb->id."/". $articleVntb->seo_title)}}'>
 								<img src="{{asset('assets/upload/article/'.$articleVntb->background_image)}}"/></a>
 							<div class="article-slide">
-								<h3><a href='{{asset("bai-viet/".$articleVntb->id."/". $articleVntb->seo_title)}}'>VNTB – {{$articleVntb->title}}</a></h3>
+								<h3><a href='{{asset("bai-viet/".$articleVntb->id."/". $articleVntb->seo_title)}}'> {{$articleVntb->title}}</a></h3>
 								<a href='{{asset("bai-viet/".$articleVntb->id."/". $articleVntb->seo_title)}}' class="info-line">
-									<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($articleVntb->created_at))}}</span>
+									{{-- <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($articleVntb->created_at))}}</span> --}}
 									<span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;Bình luận</span>
 								</a>
 							</div>
 						</div>
 						<div class="item-content">
-							<p>(VNTB) –&nbsp;{{$articleVntb->description}}</p>
+							<p>&nbsp;{{$articleVntb->description}}</p>
 						</div>
 					</div>
 					@endif
@@ -382,8 +382,8 @@
 						<a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>
 							<img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded"/></a>
 						<div class="item-content">
-							<h3><a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>VNTB – {{$article->title}}</a></h3>
-							<span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($article->created_at))}}</span>
+							<h3><a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'> {{$article->title}}</a></h3>
+							{{-- <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($article->created_at))}}</span> --}}
 							<a href="{{asset('bai-viet/{$article->title}/{$article->id}')}}#comments"><span><i class="fa fa-comment-o"></i>&nbsp;&nbsp;Bình luận</span></a>
 
 						</div>

@@ -1170,7 +1170,7 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
 
 				<div class="header-block">
 					<div class="header-logo">
-						<a href="/"><img src="{{asset('assets/header-logo.png')}}" /></a>
+						<a href="/"><img src="{{asset('assets/images/header-image.jpg')}}" /></a>
 					</div>
 
 				</div>
@@ -1221,7 +1221,7 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
 								@if(isset($mostReadArticles) && $mostReadArticles)
 								@foreach($mostReadArticles as $article)
 								<li>
-									<h4><a href= "{{asset('bai-viet/'.$article->id.'/'. $article->seo_title)}}">VNTB – {{$article->title}}</a></h4><i class="fa fa-exclamation"></i>
+									<h4><a href= "{{asset('bai-viet/'.$article->id.'/'. $article->seo_title)}}">{{$article->title}}</a></h4><i class="fa fa-exclamation"></i>
 								</li>
 								@endforeach
 								@endif
@@ -1274,8 +1274,8 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
                                         <a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>
                                             <img src="{{asset('assets/upload/article/'.$article->background_image)}}" class="item-photo litespeed-loaded"/></a>
                                         <div class="item-content">
-                                            <h3><a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>VNTB – {{$article->title}}</a></h3>
-                                            <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($article->created_at))}}</span>
+                                            <h3><a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>{{$article->title}}</a></h3>
+                                            {{-- <span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{{date('d/m/Y', strtotime($article->created_at))}}</span> --}}
 
                                         </div>
                                     </div>
@@ -1342,7 +1342,7 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
 				<!-- BEGIN .wrapper -->
 				<div class="wrapper">
 
-					<p class="left">Copyright 2021 Việt Nam Thời Báo - Hội nhà báo Độc lập Việt Nam (VNTB - IJAVN) . Theme của IJAVN <a href="/" target="_blank"></a></p>
+					<p class="left">Copyright 2021 Việt Nam Thời Báo - Hội nhà báo Độc lập Việt Nam ( IJAVN) . Theme của IJAVN <a href="/" target="_blank"></a></p>
 
 					<div class="clear-float"></div>
 
