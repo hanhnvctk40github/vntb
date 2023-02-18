@@ -7,7 +7,7 @@
         <div class="zvn-add-new pull-right">
             <a href="{{ route('admin.article.add.get') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Thêm
                 mới</a>
-            <button class="btn btn-danger btn-delete-all" style="display:none;"><i class="fa fa-plus-circle"></i>Xóa bài viết
+            <button class="btn btn-danger btn-delete-all"><i class="fa fa-plus-circle"></i>Xóa bài viết
                 đã chọn</a>
         </div>
     </div>
@@ -143,6 +143,7 @@
 @endsection
 @section('script')
     <script>
+        $(".btn-delete-all").hide();
         $("input[data-hide-post]").change(function() {
             $.ajax({
                 url: "{{ route('admin.article.hide-post') }}",
@@ -160,18 +161,44 @@
             });
 
         });
-        $(".btn-delete-all").css('display', 'inline-block')
         $("input[data-choose-post]").change(function() {
-            
-            $("input[data-choose-post]").each(function() {
-                if (this.checked) {
-                    console.log("checked")
-                    $(".btn-delete-all").css('display', 'inline-block')
+            if ($("input[data-choose-post]:checked").length) {
+                $(".btn-delete-all").show();
+            } else {
+                $(".btn-delete-all").hide();
+            }
+        });
+        $("input[data-choose-post-all]").click(function() {
+            $("input[data-choose-post]").prop('checked', this.checked);
+            if ($("input[data-choose-post]:checked").length) {
+                $(".btn-delete-all").show();
+            } else {
+                $(".btn-delete-all").hide();
+            }
+        });
+        $(".btn-delete-all").click(function() {
+            let listId = [];
+            $("input[data-choose-post]:checked").each(function() {
+                listId.push($(this).data('id'))
+            });
+            console.log("listDelete", listId);
+
+            $.ajax({
+                url: "{{ route('admin.article.bulk-delete') }}",
+                type: 'POST',
+                data: {
+                    listId,
+                    _token: "{{ csrf_token() }}"
+                }
+            }).done(function(res) {
+                if (res.success) {
+                    alert('Thành công');
+                    location.reload();
+
                 } else {
-                    $(".btn-delete-all").css('display', 'none')
+                    alert('Thất bại');
                 }
             });
-
 
         });
     </script>

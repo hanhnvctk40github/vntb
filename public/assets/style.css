@@ -1,30 +1,3 @@
-/*
-Theme Name: Novomag Theme
-Theme URI: http://ontariothemes.net/
-Description: Team-IJAVN 3.0 Wordpress Theme
-Author: Team IJAVN
-Author URI: https://www.vietnamthoibao.org
-Template: novomag-theme
-Version: 1.0.0
-License: GNU General Public License
-License URI: README_License.txt
-Text Domain: novomag-theme-child
-Tags: Tin mới,Tin Mới nhật,Tin tức,Đối điện,Tin tức 24h,Cải cách tư pháp,Phạm Chí Dũng,IJAVN, 
-Diễn Đàn,Tin mới nóng,Dân Chủ,Chính Trị,Kinh tế,Xã hội,Nước Úc,Nguyễn Quang Duy,luật bán nước,Mốc son tháng Bảy!,Khánh Hoà,
-Thế Giới,về Hội,Tin Tức An Nam,Virus corona,thêm bình luận,mùa dịch corona,cập nhật tin tức mới nhất,Hồ Duy Hải,Bưu cục Cầu Voi,
-vietnamthoibao,thoibao,bao,thoi,mới,biểu nào dám,đại biểu nào,nào dám bỏ,Có đại biểu,đảng chính trị,chính phủ Úc,Anh Khoa,
-dám bỏ lá,không đồng ý?,bỏ lá phiếu,Nguyễn Phú Trọng,Dấu ấn,lá phiếu không đồng,bỏ lá phiếu không,Châu Văn Khảm,Nước Úc,
-dám bỏ lá phiếu,cách Tư pháp Trung,Có đại biểu nào, nào dám bỏ lá,biểu tình chống TQ,Người Việt ở Úc,Nguyễn Quang Duy,Nguyễn Quang Duy,
-anh hùng lao động,Bình Thuận Minh Bạch,Đại Biểu Quốc Hội,Chân Dung Anh Hùng,Nguyễn Văn Đông,anh hùng lao động,Bình,chính sách Trung Quốc,
-Hồ Cẩm Đào,Khánh An,Angela Merkel,David Hutt,eu,Quách An,Quan hệ Đức,Trung,Derek Chauvin,George Floyd,Mai Tú Ân,mạng xã hội,biểu tình ở Mỹ,
-Bưu cục Cầu Voi,Bưu cục Cầu Voi,Cải cách tư pháp,Ngô Huy Cương,Ngô Huy Cương,Trần Dzạ Dzũng,đường sắt Cát Linh,Hà Đông,Hà Nội,Nguyễn Huy Cường,
-BS Trần Văn Phúc,đào tạo bác sĩ,cấm xe máy,Út Sài Gòn,Hong Kong,người tị nạn,Anh Khoa,Biếm Hoạ Chủ Nhật,Siêu cường Corona,Trần Thế Kỷ,cho,
-chợ truyền thống,Diệp Chi,siêu thị,Vi tiểu bảo,Nguyễn Ngọc Hoà,quan hệ Việt,Mỹ,kỳ thị,Từ Thức,bộ Công an,giám định tư pháp,Minh Tú,
-bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh bạch,trấn áp tinh thần,Trịnh Bá Phương,cụ Lê Đình Kình,đất quốc phòng,
-*/
-
-
-/** Wordpress default clases */
 
 .post.sticky { background: #f8f8f8; padding: 0px 0px 16px 0px; }
 

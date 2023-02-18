@@ -12,34 +12,38 @@ class ArticleController extends Controller
     protected $infoService;
     public function __construct(InfoService $infoService)
     {
-        $this->infoService =  $infoService;
+        $this->infoService = $infoService;
     }
 
-    public function detail($id) {
-        $ip             = $_SERVER['REMOTE_ADDR'];
-        $user_agent     = $_SERVER['HTTP_USER_AGENT'];
+    public function detail($id)
+    {
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $user_agent = $_SERVER['HTTP_USER_AGENT'];
         $resultSaveInfo = $this->infoService->saveInfo($ip, $user_agent, $id);
-        $article = Article::findOrFail($id);
+        $article = Article::display()->findOrFail($id);
         $title = $article->title;
-        $mostReadArticles = Article::all()->sortByDesc('created_at')->take(20);
-        return view('detail',['article'=>$article,'title'=>$title, 'mostReadArticles' => $mostReadArticles]);
+        $mostReadArticles = Article::display()->get()->sortByDesc('created_at')->take(20);
+        return view('detail', ['article' => $article, 'title' => $title, 'mostReadArticles' => $mostReadArticles]);
     }
 
-    public function index(){
+    public function index()
+    {
         $article = new Article;
         $articles = $article::all()->sortBy('id_category');
         $category = new Category;
         $categories = $category::all();
-        return view('Admin.pages.article.index',['articles'=>$articles,'categories'=>$categories]);
+        return view('Admin.pages.article.index', ['articles' => $articles, 'categories' => $categories]);
     }
 
-    public function addGet(){
+    public function addGet()
+    {
         $category = new Category;
         $categories = $category::all();
-        return view('Admin.pages.article.add',['categories'=>$categories]);
+        return view('Admin.pages.article.add', ['categories' => $categories]);
     }
 
-    public function addPost(Request $request){
+    public function addPost(Request $request)
+    {
         $article = new Article;
         $article->title = $request->title;
         $article->description = $request->description;
@@ -50,7 +54,7 @@ class ArticleController extends Controller
         $create_slug = $this->infoService->create_slug($toSlug);
         $article->seo_title = $create_slug;
         if ($request->hasfile('background_image')) {
-            $fileName = time().$request->file('background_image')->getClientOriginalName();
+            $fileName = time() . $request->file('background_image')->getClientOriginalName();
             $request->file('background_image')->move(public_path('/assets/upload/article'), $fileName);
             $article->background_image = $fileName;
         }
@@ -58,15 +62,17 @@ class ArticleController extends Controller
         return redirect()->route("admin.article.index");
     }
 
-    public function editGet($id){
+    public function editGet($id)
+    {
         $category = new Category;
         $categories = $category::all();
         $articleModel = new Article;
         $article = $articleModel::findOrFail($id);
-        return view('Admin.pages.article.edit',['article'=>$article, 'categories'=>$categories]);
+        return view('Admin.pages.article.edit', ['article' => $article, 'categories' => $categories]);
     }
 
-    public function editPost(Request $request){
+    public function editPost(Request $request)
+    {
         $articleModel = new Article;
         $article = $articleModel::findOrFail($request->id);
         $article->title = $request->title;
@@ -75,7 +81,7 @@ class ArticleController extends Controller
         $article->id_category = $request->categoryId;
         $article->status_button_register = $request->btnRegister;
         if ($request->hasfile('background_image')) {
-            $fileName = time().$request->file('background_image')->getClientOriginalName();
+            $fileName = time() . $request->file('background_image')->getClientOriginalName();
             $request->file('background_image')->move(public_path('/assets/upload/article'), $fileName);
             $article->background_image = $fileName;
         }
@@ -83,17 +89,34 @@ class ArticleController extends Controller
         return redirect()->route("admin.article.index");
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         $articleModel = new Article;
         $article = $articleModel::findOrFail($id);
         $article->delete();
-        if (file_exists("/assets/upload/article/".$article->background_image)) {
-            unlink("/assets/upload/article/".$article->background_image);
+        if (file_exists("/assets/upload/article/" . $article->background_image)) {
+            unlink("/assets/upload/article/" . $article->background_image);
         }
         return redirect()->route("admin.article.index");
     }
+    public function bulkDelete(Request $request)
+    {
+        foreach ($request->listId as $id) {
+            $articleModel = new Article;
+            $article = $articleModel::findOrFail($id);
+            $article->delete();
+            if (file_exists("/assets/upload/article/" . $article->background_image)) {
+                unlink("/assets/upload/article/" . $article->background_image);
+            }
+        }
+        return [
+            'success' => true,
+            'message' => 'Thành công',
+        ];
+    }
 
-    public function hidePost(Request $request){
+    public function hidePost(Request $request)
+    {
         $articleModel = new Article;
         $article = $articleModel::findOrFail($request->id);
         $article->is_display = !$article->is_display;
@@ -104,8 +127,9 @@ class ArticleController extends Controller
         ];
     }
 
-    public function upload(Request $request){
-        $fileName = time().'_content_'.$request->file('upload')->getClientOriginalName();
+    public function upload(Request $request)
+    {
+        $fileName = time() . '_content_' . $request->file('upload')->getClientOriginalName();
         $request->file('upload')->move(public_path('/assets/upload/article'), $fileName);
         $url = env("APP_URL");
         $filePath = "$url/public/assets/upload/article/" . $fileName;

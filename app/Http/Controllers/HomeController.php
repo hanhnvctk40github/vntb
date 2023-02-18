@@ -19,27 +19,27 @@ class HomeController extends Controller
         $user_agent     = $_SERVER['HTTP_USER_AGENT'];
         $this->infoService->saveInfo($ip, $user_agent);
 
-        $article = Article::all()->sortByDesc('created_at')->first();
-        $articlesNew = Article::all()->sortByDesc('created_at')->take(3);
-        $articlesBreakings = Article::all()->sortByDesc('created_at')->take(4);
+        $article = Article::display()->get()->sortByDesc('created_at')->first();
+        $articlesNew = Article::display()->get()->sortByDesc('created_at')->take(3);
+        $articlesBreakings = Article::display()->get()->sortByDesc('created_at')->take(4);
 
-        $mostReadArticles = Article::all()->sortByDesc('created_at')->take(20);
+        $mostReadArticles = Article::display()->get()->sortByDesc('created_at')->take(20);
 
-        $articleDoidiens = Article::where('id_category', 1)->get()->sortByDesc('created_at')->take(4);
-        $articleDanchus = Article::where('id_category', 2)->get()->sortByDesc('created_at')->take(4);
-        $articleDiendans = Article::where('id_category', 3)->get()->sortByDesc('created_at')->take(4);
-        $articleChinhtris = Article::where('id_category', 4)->get()->sortByDesc('created_at')->take(4);
-        $articleKinhtes = Article::where('id_category', 5)->get()->sortByDesc('created_at')->take(4);
-        $articleThegiois = Article::where('id_category', 6)->get()->sortByDesc('created_at')->take(3);
-        $articleVntbs = Article::where('id_category', 7)->get()->sortByDesc('created_at')->take(4);
+        $articleDoidiens = Article::display()->where('id_category', 1)->get()->sortByDesc('created_at')->take(4);
+        $articleDanchus = Article::display()->where('id_category', 2)->get()->sortByDesc('created_at')->take(4);
+        $articleDiendans = Article::display()->where('id_category', 3)->get()->sortByDesc('created_at')->take(4);
+        $articleChinhtris = Article::display()->where('id_category', 4)->get()->sortByDesc('created_at')->take(4);
+        $articleKinhtes = Article::display()->where('id_category', 5)->get()->sortByDesc('created_at')->take(4);
+        $articleThegiois = Article::display()->where('id_category', 6)->get()->sortByDesc('created_at')->take(3);
+        $articleVntbs = Article::display()->where('id_category', 7)->get()->sortByDesc('created_at')->take(4);
 
-        $articleDoidien = Article::where('id_category', 1)->first();
-        $articleDanchu = Article::where('id_category', 2)->first();
-        $articleDiendan = Article::where('id_category', 3)->first();
-        $articleChinhtri = Article::where('id_category', 4)->first();
-        $articleKinhte = Article::where('id_category', 5)->first();
-        $articleThegioi = Article::where('id_category', 6)->first();
-        $articleVntb = Article::where('id_category', 7)->first();
+        $articleDoidien = Article::display()->where('id_category', 1)->first();
+        $articleDanchu = Article::display()->where('id_category', 2)->first();
+        $articleDiendan = Article::display()->where('id_category', 3)->first();
+        $articleChinhtri = Article::display()->where('id_category', 4)->first();
+        $articleKinhte = Article::display()->where('id_category', 5)->first();
+        $articleThegioi = Article::display()->where('id_category', 6)->first();
+        $articleVntb = Article::display()->where('id_category', 7)->first();
 
         return view('index', ['article' => $article, 'articlesBreakings' => $articlesBreakings,
             'articlesNew' => $articlesNew, 'mostReadArticles' => $mostReadArticles,

@@ -279,7 +279,7 @@
 	<div class="blog-list style-2">
         @foreach ($articleKinhtes as $article)
             @if(isset($article) && $article)
-            <div class="item post-44325 post type-post status-publish format-standard has-post-thumbnail hentry category-economy category-news category-vntb tag-doan-hung-quoc tag-gia-tri-kinh-te tag-joe-biden tag-kinh-te-de-hieu">
+            <div class="item post-44325 post type-post status-publish format-standard has-post-thumbnail hentry category-economy category-news tag-doan-hung-quoc tag-gia-tri-kinh-te tag-joe-biden tag-kinh-te-de-hieu">
                 <div class="item-header">
                     <a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}' class="item-photo">
                         <img src="{{asset('assets/upload/article/'.$article->background_image)}}"/></a>

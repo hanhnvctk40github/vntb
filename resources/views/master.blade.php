@@ -13,21 +13,9 @@
 
     <!-- Meta Keywords -->
     <meta name="description"
-        content="Tin Tức An Nam (Tin Tức An Nam). Diễn đàn Hội nhà báo độc lập Việt Nam, cung cấp thông tin chính trị xã hội,
-pháp luật, kinh tế tài chính... Phản ảnh trung thực, cập nhật tin tức 24/7">
+        content="Tin Tức An Nam (Tin Tức An Nam)">
     <meta name="keywords"
-        content="Tin mới,Tin Mới nhật,Tin tức,Đối điện,Tin tức 24h,Cải cách tư pháp,Phạm Chí Dũng,IJAVN,
-Diễn Đàn,Tin mới nóng,Dân Chủ,Chính Trị,Kinh tế,Xã hội,Nước Úc,Nguyễn Quang Duy,luật bán nước,Mốc son tháng Bảy!,Khánh Hoà,
-Thế Giới,về Hội,Tin Tức An Nam,Virus corona,thêm bình luận,mùa dịch corona,cập nhật tin tức mới nhất,Hồ Duy Hải,Bưu cục Cầu Voi,
-vietnamthoibao,thoibao,bao,thoi,mới,biểu nào dám,đại biểu nào,nào dám bỏ,Có đại biểu,đảng chính trị,chính phủ Úc,Anh Khoa,
-dám bỏ lá,không đồng ý?,bỏ lá phiếu,Nguyễn Phú Trọng,Dấu ấn,lá phiếu không đồng,bỏ lá phiếu không,Châu Văn Khảm,Nước Úc,
-dám bỏ lá phiếu,cách Tư pháp Trung,Có đại biểu nào, nào dám bỏ lá,biểu tình chống TQ,Người Việt ở Úc,Nguyễn Quang Duy,Nguyễn Quang Duy,
-anh hùng lao động,Bình Thuận Minh Bạch,Đại Biểu Quốc Hội,Chân Dung Anh Hùng,Nguyễn Văn Đông,anh hùng lao động,Bình,chính sách Trung Quốc,
-Hồ Cẩm Đào,Khánh An,Angela Merkel,David Hutt,eu,Quách An,Quan hệ Đức,Trung,Derek Chauvin,George Floyd,Mai Tú Ân,mạng xã hội,biểu tình ở Mỹ,
-Bưu cục Cầu Voi,Bưu cục Cầu Voi,Cải cách tư pháp,Ngô Huy Cương,Ngô Huy Cương,Trần Dzạ Dzũng,đường sắt Cát Linh,Hà Đông,Hà Nội,Nguyễn Huy Cường,
-BS Trần Văn Phúc,đào tạo bác sĩ,cấm xe máy,Út Sài Gòn,Hong Kong,người tị nạn,Anh Khoa,Biếm Hoạ Chủ Nhật,Siêu cường Corona,Trần Thế Kỷ,cho,
-chợ truyền thống,Diệp Chi,siêu thị,Vi tiểu bảo,Nguyễn Ngọc Hoà,quan hệ Việt,Mỹ,kỳ thị,Từ Thức,bộ Công an,giám định tư pháp,Minh Tú,
-bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh bạch,trấn áp tinh thần,Trịnh Bá Phương,cụ Lê Đình Kình,đất quốc phòng">
+        content="Tin Tức An Nam">
     @yield('metaTag')
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
@@ -450,12 +438,12 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
     <meta property="og:url" content="/">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Tin tức trung thực, phản biện không ngừng">
-    <meta property="og:image" content="/wp-content/uploads/2019/11/logo-IJAVN.png">
-    <meta property="og:image:url" content="/wp-content/uploads/2019/11/logo-IJAVN.png">
-    <meta property="og:image:secure_url" content="/wp-content/uploads/2019/11/logo-IJAVN.png">
+    <meta property="og:image" content="">
+    <meta property="og:image:url" content="">
+    <meta property="og:image:secure_url" content="">
     <meta property="og:image:width" content="319">
     <meta property="og:image:height" content="320">
-    <meta property="article:publisher" content="https://www.facebook.com/ijavn.org/">
+    <meta property="article:publisher" content="">
     <!-- Google+ / Schema.org -->
     <!-- Twitter Cards -->
     <!-- SEO -->
@@ -1174,7 +1162,6 @@ bộ Công an,đối thoại,Đồng Tâm 9/1/2020,Đồng Tâm,Hữu Sự,minh 
                         <li id="menu-item-3331"
                             class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home single">
                             <a href="/">Trang chủ</a></li>
-                        {{-- <li id="menu-item-18487" class="menu-item menu-item-type-post_type menu-item-object-page single"><a href="/ve-ijavn/">Về IJAVN</a></li> --}}
                         <li id="menu-item-3334"
                             class="menu-item menu-item-type-custom menu-item-object-custom single"><a
                                 href="/latest">Danh mục-Tác giả</a></li>

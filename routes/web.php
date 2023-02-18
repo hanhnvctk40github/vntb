@@ -34,6 +34,7 @@ Route::prefix('/admin')->middleware([Auth::class])->group(function () {
        Route::get('/article/add', [ArticleController::class, 'addGet'])->name('admin.article.add.get');
        Route::post('/article/add', [ArticleController::class, 'addPost'])->name('admin.article.add.post');
        Route::post('/article/hide-post', [ArticleController::class, 'hidePost'])->name('admin.article.hide-post');
+       Route::post('/article/bulk-delete', [ArticleController::class, 'bulkDelete'])->name('admin.article.bulk-delete');
 
        Route::get('/article/edit/{id}', [ArticleController::class, 'editGet'])->name('admin.article.edit.get');
        Route::post('/article/edit', [ArticleController::class, 'editPost'])->name('admin.article.edit.post');

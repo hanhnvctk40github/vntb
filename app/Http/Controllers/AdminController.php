@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Session;
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use Hash;
 
 class AdminController extends Controller
 {
@@ -19,7 +20,7 @@ class AdminController extends Controller
         $admin = new Admin;
         $admin = $admin::all();
         foreach ($admin as $value) {
-            if($value->username == $username && $value->password == $password){
+            if($value->username == $username && Hash::check($password, $value->password)){
                 $userSession = array('id' => $value->id, 'username' => $value->username);
                 Session::put('user', $userSession);
                 Session::save();

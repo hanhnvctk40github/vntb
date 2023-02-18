@@ -10,4 +10,9 @@ class Article extends Model
     use HasFactory;
 
     protected $table = 'articles';
+
+    public function scopeDisplay($query)
+    {
+     return $query->where('is_display', true);
+    }
 }

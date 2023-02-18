@@ -10,7 +10,7 @@
 <div class="main-content left">
     <!-- BEGIN .panel -->
     <div class="panel">
-        <div class="shortcode-content hreview post-47188 post type-post status-publish format-standard has-post-thumbnail hentry category-economy category-news category-vntb tag-covid-19 tag-dong-gop-quy-phong-dich tag-quy-vac-xin-covid">
+        <div class="shortcode-content hreview post-47188 post type-post status-publish format-standard has-post-thumbnail hentry category-economy category-news tag-covid-19 tag-dong-gop-quy-phong-dich tag-quy-vac-xin-covid">
             <div class="article-head">
 
                 <h1 class="fn entry-title" style="margin-top: 15px">{{$article->title}}</h1>
