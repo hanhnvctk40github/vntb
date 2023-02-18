@@ -7,6 +7,8 @@
         <div class="zvn-add-new pull-right">
             <a href="{{ route('admin.article.add.get') }}" class="btn btn-success"><i class="fa fa-plus-circle"></i> Thêm
                 mới</a>
+            <button class="btn btn-danger btn-delete-all" style="display:none;"><i class="fa fa-plus-circle"></i>Xóa bài viết
+                đã chọn</a>
         </div>
     </div>
 
@@ -28,6 +30,9 @@
                         <table class="table table-striped jambo_table bulk_action">
                             <thead>
                                 <tr class="headings">
+                                    <th class="column-title">
+                                        <input type="checkbox" data-choose-post-all />
+                                    </th>
                                     <th class="column-title">#</th>
                                     <th class="column-title">Ảnh chính bài viết</th>
                                     <th class="column-title">Danh mục</th>
@@ -41,6 +46,8 @@
                                 @if ($articles)
                                     @foreach ($articles as $article)
                                         <tr class="even pointer">
+                                            <td><input type="checkbox" data-choose-post data-id="{{ $article->id }}" />
+                                            </td>
                                             <td>{{ $article->id }}</td>
                                             <td>
                                                 <img src="{{ asset('assets/upload/article/' . $article->background_image) }}"
@@ -145,10 +152,24 @@
                     _token: "{{ csrf_token() }}"
                 }
             }).done(function(res) {
-                if(res.success) {
+                if (res.success) {
                     alert('Thành công')
+                } else {
+                    alert('Thất bại')
                 }
             });
+
+        });
+
+        $("input[data-choose-post]").change(function() {
+            $("input[data-choose-post]").each(function() {
+                if (this.checked) {
+                    $(".btn-delete-all").css('display', 'inline-block')
+                } else {
+                    $(".btn-delete-all").css('display', 'none')
+                }
+            });
+
 
         });
     </script>
