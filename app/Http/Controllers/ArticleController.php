@@ -93,6 +93,17 @@ class ArticleController extends Controller
         return redirect()->route("admin.article.index");
     }
 
+    public function hidePost(Request $request){
+        $articleModel = new Article;
+        $article = $articleModel::findOrFail($request->id);
+        $article->is_display = !$article->is_display;
+        $article->save();
+        return [
+            'success' => true,
+            'message' => 'Thành công',
+        ];
+    }
+
     public function upload(Request $request){
         $fileName = time().'_content_'.$request->file('upload')->getClientOriginalName();
         $request->file('upload')->move(public_path('/assets/upload/article'), $fileName);

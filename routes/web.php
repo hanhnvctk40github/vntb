@@ -33,6 +33,7 @@ Route::prefix('/admin')->middleware([Auth::class])->group(function () {
        Route::get('/article', [ArticleController::class, 'index'])->name('admin.article.index');
        Route::get('/article/add', [ArticleController::class, 'addGet'])->name('admin.article.add.get');
        Route::post('/article/add', [ArticleController::class, 'addPost'])->name('admin.article.add.post');
+       Route::post('/article/hide-post', [ArticleController::class, 'hidePost'])->name('admin.article.hide-post');
 
        Route::get('/article/edit/{id}', [ArticleController::class, 'editGet'])->name('admin.article.edit.get');
        Route::post('/article/edit', [ArticleController::class, 'editPost'])->name('admin.article.edit.post');
@@ -52,6 +53,7 @@ Route::prefix('/admin')->middleware([Auth::class])->group(function () {
        Route::get('/category/delete/{id}', [CategoryController::class, 'delete'])->name('admin.category.delete');
 
        Route::get('/user', [FacebookController::class, 'index'])->name('admin.user.index');
+      
 
 });
 

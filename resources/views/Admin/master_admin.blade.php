@@ -25,5 +25,6 @@
     </div>
 </div>
 @include('Admin.partials.scripts')
+@yield('script')
 </body>
 </html>
