@@ -1,6 +1,6 @@
 <footer>
   <div class="pull-right">
-      VNTB
+      Tin Tức An Nam
   </div>
   <div class="clearfix"></div>
 </footer>

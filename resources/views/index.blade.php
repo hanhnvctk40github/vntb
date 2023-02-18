@@ -54,7 +54,7 @@
 		    </div>
             <div class="item-content">
                 <div class="post-category" style="color: #214a82;">
-                    <a href="/">VNTB</a>
+                    <a href="/">Tin Tức An Nam</a>
                 </div>
                 <h4><a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>
                         {{$article->title}}</a></h4>
@@ -299,7 +299,7 @@
                             <strong>Tin mới</strong>
                         </a>
                         <a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}' class="category-link" style="color: #214a82">
-                            <strong>VNTB</strong>
+                            <strong>Tin Tức An Nam</strong>
                         </a>
                     </span>
                     <span class="right">
@@ -333,7 +333,7 @@
 			</div>
 			<div class="item-content">
 				<div class="post-category" style="color: #214a82;">
-					<a href="/">VNTB</a>
+					<a href="/">Tin Tức An Nam</a>
 				</div>
 				<h4><a href='{{asset("bai-viet/".$article->id."/". $article->seo_title)}}'>
 						{{$article->title}}</a></h4>
@@ -347,7 +347,7 @@
 </div> <!-- BEGIN .panel -->
 <div class="panel">
 	<div class="p-title">
-		<h2 style="background-color: #214a82;">VNTB</h2>
+		<h2 style="background-color: #214a82;">Tin Tức An Nam</h2>
 	</div>
 	<div>
 		<div class="panel-split">

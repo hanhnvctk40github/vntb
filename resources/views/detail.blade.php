@@ -56,7 +56,7 @@
                 <div class="" style="width 100%">
                     <div class="widget_text widget-1 first widget">
 						<div class="w-title">
-							<h3>Đăng ký thành viên Việt Nam thời báo</h3>
+							<h3>Đăng ký thành viên Tin Tức An Nam</h3>
 						</div>
 						<div class="textwidget custom-html-widget">
 							<a href="{{route('login')}}" style="display: block; margin-top: 30px"><img src="{{asset('assets/member.jpg')}}" /></a>
@@ -66,7 +66,7 @@
                 <div class="right">
                     <span>
                         <i class="fa fa-tags"></i>
-                        Tags: VNTB</span>
+                        Tags: Tin Tức An Nam</span>
                 </div>
             </div>
             @endif
