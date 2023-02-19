@@ -90,7 +90,7 @@
 						</div>
 					</div>
 					<div class="item-content">
-						<p>&nbsp;{{$articleDanchu->description}}</p>
+						<p>&nbsp;{{$articleDoidien->description}}</p>
 					</div>
 				</div>
 				@endif
