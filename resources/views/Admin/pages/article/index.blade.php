@@ -160,10 +160,12 @@
             });
 
         });
-
+        $(".btn-delete-all").css('display', 'inline-block')
         $("input[data-choose-post]").change(function() {
+            
             $("input[data-choose-post]").each(function() {
                 if (this.checked) {
+                    console.log("checked")
                     $(".btn-delete-all").css('display', 'inline-block')
                 } else {
                     $(".btn-delete-all").css('display', 'none')
